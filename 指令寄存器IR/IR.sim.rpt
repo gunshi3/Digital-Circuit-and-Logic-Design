@@ -1,0 +1,229 @@
+Simulator report for IR
+Wed Dec 23 23:59:44 2020
+Quartus II Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 42 nodes     ;
+; Simulation Coverage         ;      66.67 % ;
+; Total Number of Transitions ; 822          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone      ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Functional ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Vector input source                                                                        ; IR.vwf     ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; On         ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      66.67 % ;
+; Total nodes checked                                 ; 42           ;
+; Total output ports checked                          ; 42           ;
+; Total output ports with complete 1/0-value coverage ; 28           ;
+; Total output ports with no 1/0-value coverage       ; 9            ;
+; Total output ports with no 1-value coverage         ; 9            ;
+; Total output ports with no 0-value coverage         ; 14           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                    ;
++----------------------+----------------------+------------------+
+; Node Name            ; Output Port Name     ; Output Port Type ;
++----------------------+----------------------+------------------+
+; |IR|output_b[0]~reg0 ; |IR|output_b[0]~reg0 ; regout           ;
+; |IR|output_b[2]~reg0 ; |IR|output_b[2]~reg0 ; regout           ;
+; |IR|output_b[3]~reg0 ; |IR|output_b[3]~reg0 ; regout           ;
+; |IR|output_a[0]~reg0 ; |IR|output_a[0]~reg0 ; regout           ;
+; |IR|output_a[1]~reg0 ; |IR|output_a[1]~reg0 ; regout           ;
+; |IR|R[0]~reg0        ; |IR|R[0]~reg0        ; regout           ;
+; |IR|R[2]~reg0        ; |IR|R[2]~reg0        ; regout           ;
+; |IR|R[3]~reg0        ; |IR|R[3]~reg0        ; regout           ;
+; |IR|R[4]~reg0        ; |IR|R[4]~reg0        ; regout           ;
+; |IR|R[5]~reg0        ; |IR|R[5]~reg0        ; regout           ;
+; |IR|input[0]         ; |IR|input[0]         ; out              ;
+; |IR|input[1]         ; |IR|input[1]         ; out              ;
+; |IR|input[2]         ; |IR|input[2]         ; out              ;
+; |IR|input[3]         ; |IR|input[3]         ; out              ;
+; |IR|input[4]         ; |IR|input[4]         ; out              ;
+; |IR|input[5]         ; |IR|input[5]         ; out              ;
+; |IR|ld               ; |IR|ld               ; out              ;
+; |IR|clock            ; |IR|clock            ; out              ;
+; |IR|R[0]             ; |IR|R[0]             ; pin_out          ;
+; |IR|R[2]             ; |IR|R[2]             ; pin_out          ;
+; |IR|R[3]             ; |IR|R[3]             ; pin_out          ;
+; |IR|R[4]             ; |IR|R[4]             ; pin_out          ;
+; |IR|R[5]             ; |IR|R[5]             ; pin_out          ;
+; |IR|output_a[0]      ; |IR|output_a[0]      ; pin_out          ;
+; |IR|output_a[1]      ; |IR|output_a[1]      ; pin_out          ;
+; |IR|output_b[0]      ; |IR|output_b[0]      ; pin_out          ;
+; |IR|output_b[2]      ; |IR|output_b[2]      ; pin_out          ;
+; |IR|output_b[3]      ; |IR|output_b[3]      ; pin_out          ;
++----------------------+----------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------+
+; Missing 1-Value Coverage                                       ;
++----------------------+----------------------+------------------+
+; Node Name            ; Output Port Name     ; Output Port Type ;
++----------------------+----------------------+------------------+
+; |IR|output_b[1]~reg0 ; |IR|output_b[1]~reg0 ; regout           ;
+; |IR|output_a[3]~reg0 ; |IR|output_a[3]~reg0 ; regout           ;
+; |IR|R[1]~reg0        ; |IR|R[1]~reg0        ; regout           ;
+; |IR|R[7]~reg0        ; |IR|R[7]~reg0        ; regout           ;
+; |IR|input[7]         ; |IR|input[7]         ; out              ;
+; |IR|R[1]             ; |IR|R[1]             ; pin_out          ;
+; |IR|R[7]             ; |IR|R[7]             ; pin_out          ;
+; |IR|output_a[3]      ; |IR|output_a[3]      ; pin_out          ;
+; |IR|output_b[1]      ; |IR|output_b[1]      ; pin_out          ;
++----------------------+----------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------+
+; Missing 0-Value Coverage                                       ;
++----------------------+----------------------+------------------+
+; Node Name            ; Output Port Name     ; Output Port Type ;
++----------------------+----------------------+------------------+
+; |IR|output_b[1]~reg0 ; |IR|output_b[1]~reg0 ; regout           ;
+; |IR|output_a[2]~reg0 ; |IR|output_a[2]~reg0 ; regout           ;
+; |IR|output_a[3]~reg0 ; |IR|output_a[3]~reg0 ; regout           ;
+; |IR|R[1]~reg0        ; |IR|R[1]~reg0        ; regout           ;
+; |IR|R[6]~reg0        ; |IR|R[6]~reg0        ; regout           ;
+; |IR|R[7]~reg0        ; |IR|R[7]~reg0        ; regout           ;
+; |IR|input[6]         ; |IR|input[6]         ; out              ;
+; |IR|input[7]         ; |IR|input[7]         ; out              ;
+; |IR|R[1]             ; |IR|R[1]             ; pin_out          ;
+; |IR|R[6]             ; |IR|R[6]             ; pin_out          ;
+; |IR|R[7]             ; |IR|R[7]             ; pin_out          ;
+; |IR|output_a[2]      ; |IR|output_a[2]      ; pin_out          ;
+; |IR|output_a[3]      ; |IR|output_a[3]      ; pin_out          ;
+; |IR|output_b[1]      ; |IR|output_b[1]      ; pin_out          ;
++----------------------+----------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed Dec 23 23:59:44 2020
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off IR -c IR
+Info: Using vector source file "D:/文档/数电实验/指令寄存器IR/IR.vwf"
+Info: Overwriting simulation input file with simulation results
+    Info: A backup of IR.vwf called IR.sim_ori.vwf has been created in the db folder
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Warning: Found clock-sensitive change during active clock edge at time 10.0 ns on register "|IR|output_b[0]~reg0"
+Warning: Found clock-sensitive change during active clock edge at time 10.0 ns on register "|IR|R[0]~reg0"
+Warning: Found clock-sensitive change during active clock edge at time 20.0 ns on register "|IR|output_b[1]~reg0"
+Warning: Found clock-sensitive change during active clock edge at time 20.0 ns on register "|IR|R[1]~reg0"
+Warning: Found clock-sensitive change during active clock edge at time 40.0 ns on register "|IR|output_b[2]~reg0"
+Warning: Found clock-sensitive change during active clock edge at time 40.0 ns on register "|IR|R[2]~reg0"
+Warning: Found clock-sensitive change during active clock edge at time 80.0 ns on register "|IR|output_b[3]~reg0"
+Warning: Found clock-sensitive change during active clock edge at time 80.0 ns on register "|IR|R[3]~reg0"
+Warning: Found clock-sensitive change during active clock edge at time 160.0 ns on register "|IR|output_a[0]~reg0"
+Warning: Found clock-sensitive change during active clock edge at time 160.0 ns on register "|IR|R[4]~reg0"
+Warning: Found clock-sensitive change during active clock edge at time 320.0 ns on register "|IR|output_a[1]~reg0"
+Warning: Found clock-sensitive change during active clock edge at time 320.0 ns on register "|IR|R[5]~reg0"
+Warning: Found clock-sensitive change during active clock edge at time 640.0 ns on register "|IR|output_a[2]~reg0"
+Warning: Found clock-sensitive change during active clock edge at time 640.0 ns on register "|IR|R[6]~reg0"
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      66.67 %
+Info: Number of transitions in simulation is 822
+Info: Vector file IR.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II Simulator was successful. 0 errors, 14 warnings
+    Info: Peak virtual memory: 155 megabytes
+    Info: Processing ended: Wed Dec 23 23:59:44 2020
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

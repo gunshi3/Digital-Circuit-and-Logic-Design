@@ -1,0 +1,7 @@
+|Cf_dff
+X => Cf~reg0.DATAIN
+EN => Cf~reg0.ENA
+clk => Cf~reg0.CLK
+Cf <= Cf~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,121 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2009 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II
+# Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+# Date created = 23:51:03  December 26, 2020
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		CPU_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY Cyclone
+set_global_assignment -name DEVICE EP1C3T100C8
+set_global_assignment -name TOP_LEVEL_ENTITY CPU
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "9.0 SP1"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "23:51:03  DECEMBER 26, 2020"
+set_global_assignment -name LAST_QUARTUS_VERSION "9.0 SP1"
+set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_blast_fpga
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE ANY
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_global_assignment -name SEARCH_PATH "d:\\文档\\数电实验\\指令寄存器ir"
+set_global_assignment -name SEARCH_PATH "d:\\文档\\数电实验\\指令计数器pc"
+set_global_assignment -name SEARCH_PATH "d:\\文档\\数电实验\\指令译码器"
+set_global_assignment -name SEARCH_PATH "d:\\文档\\数电实验\\移位逻辑"
+set_global_assignment -name SEARCH_PATH "d:\\文档\\数电实验\\稳定器"
+set_global_assignment -name SEARCH_PATH "d:\\文档\\数电实验\\选择器"
+set_global_assignment -name SEARCH_PATH "d:\\文档\\数电实验\\通用寄存器组"
+set_global_assignment -name SEARCH_PATH "d:\\文档\\数电实验\\时钟发生器sm"
+set_global_assignment -name SEARCH_PATH "d:\\文档\\数电实验\\控制器"
+set_global_assignment -name SEARCH_PATH "d:\\文档\\数电实验\\zf寄存器"
+set_global_assignment -name SEARCH_PATH "d:\\文档\\数电实验\\cf寄存器"
+set_global_assignment -name SEARCH_PATH "d:\\文档\\数电实验\\alu函数发生器"
+set_global_assignment -name SIMULATION_MODE TIMING
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT ANY
+set_global_assignment -name VECTOR_COMPARE_TRIGGER_MODE INPUT_EDGE
+set_global_assignment -name IGNORE_CLOCK_SETTINGS ON
+set_global_assignment -name VHDL_FILE ../指令译码器/command_decoder.vhd
+set_global_assignment -name VHDL_FILE ../指令寄存器IR/IR.vhd
+set_global_assignment -name VHDL_FILE ../指令计数器PC/PC.vhd
+set_global_assignment -name VHDL_FILE ../移位逻辑/shift.vhd
+set_global_assignment -name VHDL_FILE ../选择器/MUX_8_3_1.vhd
+set_global_assignment -name VHDL_FILE ../稳定器/stabilizer.vhd
+set_global_assignment -name VHDL_FILE ../通用寄存器组/SRG_group.vhd
+set_global_assignment -name VHDL_FILE ../时钟发生器SM/SM.vhd
+set_global_assignment -name VHDL_FILE ../控制器/controller.vhd
+set_global_assignment -name VHDL_FILE ../Zf寄存器/Zf_dff.vhd
+set_global_assignment -name BDF_FILE CPU.bdf
+set_global_assignment -name MIF_FILE CPU.mif
+set_global_assignment -name VECTOR_WAVEFORM_FILE CPU功能仿真.vwf
+set_global_assignment -name MISC_FILE "D:/文档/数电实验/CPU/CPU.dpf"
+set_global_assignment -name USE_CONFIGURATION_DEVICE ON
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED"
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_location_assignment PIN_92 -to aa[0]
+set_location_assignment PIN_97 -to aa[1]
+set_location_assignment PIN_98 -to aa[2]
+set_location_assignment PIN_99 -to aa[3]
+set_location_assignment PIN_100 -to aa[4]
+set_location_assignment PIN_1 -to aa[5]
+set_location_assignment PIN_2 -to aa[6]
+set_location_assignment PIN_3 -to aa[7]
+set_location_assignment PIN_72 -to bb[0]
+set_location_assignment PIN_73 -to bb[1]
+set_location_assignment PIN_74 -to bb[2]
+set_location_assignment PIN_75 -to bb[3]
+set_location_assignment PIN_76 -to bb[4]
+set_location_assignment PIN_77 -to bb[5]
+set_location_assignment PIN_78 -to bb[6]
+set_location_assignment PIN_79 -to bb[7]
+set_location_assignment PIN_55 -to IN[0]
+set_location_assignment PIN_56 -to IN[1]
+set_location_assignment PIN_57 -to IN[2]
+set_location_assignment PIN_65 -to IN[3]
+set_location_assignment PIN_68 -to IN[4]
+set_location_assignment PIN_69 -to IN[5]
+set_location_assignment PIN_70 -to IN[6]
+set_location_assignment PIN_71 -to IN[7]
+set_location_assignment PIN_41 -to IR[0]
+set_location_assignment PIN_40 -to IR[1]
+set_location_assignment PIN_39 -to IR[2]
+set_location_assignment PIN_38 -to IR[3]
+set_location_assignment PIN_37 -to IR[4]
+set_location_assignment PIN_36 -to IR[5]
+set_location_assignment PIN_35 -to IR[6]
+set_location_assignment PIN_34 -to IR[7]
+set_location_assignment PIN_54 -to RAM_DL
+set_location_assignment PIN_28 -to RAM_XL
+set_location_assignment PIN_27 -to SM
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE CPU时序仿真.vwf
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-STATED"

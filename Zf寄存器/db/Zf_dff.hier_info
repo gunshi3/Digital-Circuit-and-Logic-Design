@@ -1,0 +1,7 @@
+|Zf_dff
+clk => Zf~reg0.CLK
+EN => Zf~reg0.ENA
+X => Zf~reg0.DATAIN
+Zf <= Zf~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

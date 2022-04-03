@@ -1,0 +1,21 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Setup 'clock'
+Slack : -15.638
+TNS   : -807.819
+
+Type  : Setup 'IR:inst4|output_a[0]'
+Slack : -5.680
+TNS   : -43.709
+
+Type  : Hold 'IR:inst4|output_a[0]'
+Slack : -2.563
+TNS   : -14.548
+
+Type  : Hold 'clock'
+Slack : 0.771
+TNS   : 0.000
+
+------------------------------------------------------------

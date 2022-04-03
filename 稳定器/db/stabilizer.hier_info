@@ -1,0 +1,29 @@
+|stabilizer
+EN => temp[1]~0.IN0
+EN => BU[7]~7.OE
+EN => BU[6]~6.OE
+EN => BU[5]~5.OE
+EN => BU[4]~4.OE
+EN => BU[3]~3.OE
+EN => BU[2]~2.OE
+EN => BU[1]~1.OE
+EN => BU[0]~0.OE
+clk => temp[1]~0.IN1
+X[0] => temp[0].DATAIN
+X[1] => temp[1].DATAIN
+X[2] => temp[2].DATAIN
+X[3] => temp[3].DATAIN
+X[4] => temp[4].DATAIN
+X[5] => temp[5].DATAIN
+X[6] => temp[6].DATAIN
+X[7] => temp[7].DATAIN
+BU[0] <= BU[0]~0.DB_MAX_OUTPUT_PORT_TYPE
+BU[1] <= BU[1]~1.DB_MAX_OUTPUT_PORT_TYPE
+BU[2] <= BU[2]~2.DB_MAX_OUTPUT_PORT_TYPE
+BU[3] <= BU[3]~3.DB_MAX_OUTPUT_PORT_TYPE
+BU[4] <= BU[4]~4.DB_MAX_OUTPUT_PORT_TYPE
+BU[5] <= BU[5]~5.DB_MAX_OUTPUT_PORT_TYPE
+BU[6] <= BU[6]~6.DB_MAX_OUTPUT_PORT_TYPE
+BU[7] <= BU[7]~7.DB_MAX_OUTPUT_PORT_TYPE
+
+

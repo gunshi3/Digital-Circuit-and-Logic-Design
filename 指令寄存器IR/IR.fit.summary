@@ -1,0 +1,12 @@
+Fitter Status : Successful - Wed Dec 23 23:57:57 2020
+Quartus II Version : 9.0 Build 184 04/29/2009 SP 1 SJ Web Edition
+Revision Name : IR
+Top-level Entity Name : IR
+Family : Cyclone
+Device : EP1C3T100C8
+Timing Models : Final
+Total logic elements : 16 / 2,910 ( < 1 % )
+Total pins : 26 / 65 ( 40 % )
+Total virtual pins : 0
+Total memory bits : 0 / 59,904 ( 0 % )
+Total PLLs : 0 / 1 ( 0 % )

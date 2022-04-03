@@ -1,0 +1,620 @@
+TimeQuest Timing Analyzer report for CPU
+Sat Jan 02 16:44:56 2021
+Quartus II Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Fmax Summary
+  6. Setup Summary
+  7. Hold Summary
+  8. Recovery Summary
+  9. Removal Summary
+ 10. Minimum Pulse Width
+ 11. Setup Times
+ 12. Hold Times
+ 13. Clock to Output Times
+ 14. Minimum Clock to Output Times
+ 15. Propagation Delay
+ 16. Minimum Propagation Delay
+ 17. Setup Transfers
+ 18. Hold Transfers
+ 19. Report TCCS
+ 20. Report RSKM
+ 21. Unconstrained Paths
+ 22. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                   ;
++--------------------+----------------------------------------------------------------+
+; Quartus II Version ; Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; CPU                                                            ;
+; Device Family      ; Cyclone                                                        ;
+; Device Name        ; EP1C3T100C8                                                    ;
+; Timing Models      ; Final                                                          ;
+; Delay Model        ; Slow Model                                                     ;
+; Rise/Fall Delays   ; Unavailable                                                    ;
++--------------------+----------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                     ;
++----------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------+
+; Clock Name           ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                  ;
++----------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------+
+; clock                ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clock }                ;
+; IR:inst4|output_a[0] ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { IR:inst4|output_a[0] } ;
++----------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------+
+
+
++------------------------------------------------------------+
+; Fmax Summary                                               ;
++------------+-----------------+----------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name           ; Note ;
++------------+-----------------+----------------------+------+
+; 30.98 MHz  ; 30.98 MHz       ; clock                ;      ;
+; 186.08 MHz ; 186.08 MHz      ; IR:inst4|output_a[0] ;      ;
++------------+-----------------+----------------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------------------+
+; Setup Summary                                  ;
++----------------------+---------+---------------+
+; Clock                ; Slack   ; End Point TNS ;
++----------------------+---------+---------------+
+; clock                ; -15.638 ; -807.819      ;
+; IR:inst4|output_a[0] ; -5.680  ; -43.709       ;
++----------------------+---------+---------------+
+
+
++-----------------------------------------------+
+; Hold Summary                                  ;
++----------------------+--------+---------------+
+; Clock                ; Slack  ; End Point TNS ;
++----------------------+--------+---------------+
+; IR:inst4|output_a[0] ; -2.563 ; -14.548       ;
+; clock                ; 0.771  ; 0.000         ;
++----------------------+--------+---------------+
+
+
+--------------------
+; Recovery Summary ;
+--------------------
+No paths to report.
+
+
+-------------------
+; Removal Summary ;
+-------------------
+No paths to report.
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Minimum Pulse Width                                                                                                                                                                                ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                                                                            ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------------------------------------------------------------------------------------+
+; -1.583 ; 1.000        ; 2.583          ; Port Rate        ; clock ; Rise       ; clock                                                                                                             ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Fall       ; Cf_dff:inst2|Cf                                                                                                   ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Fall       ; Cf_dff:inst2|Cf                                                                                                   ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Fall       ; IR:inst4|output_a[0]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Fall       ; IR:inst4|output_a[0]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Fall       ; IR:inst4|output_a[1]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Fall       ; IR:inst4|output_a[1]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Fall       ; IR:inst4|output_a[2]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Fall       ; IR:inst4|output_a[2]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Fall       ; IR:inst4|output_a[3]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Fall       ; IR:inst4|output_a[3]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Fall       ; IR:inst4|output_b[0]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Fall       ; IR:inst4|output_b[0]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Fall       ; IR:inst4|output_b[1]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Fall       ; IR:inst4|output_b[1]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Fall       ; IR:inst4|output_b[2]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Fall       ; IR:inst4|output_b[2]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Fall       ; IR:inst4|output_b[3]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Fall       ; IR:inst4|output_b[3]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Fall       ; PC:inst6|address[0]                                                                                               ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Fall       ; PC:inst6|address[0]                                                                                               ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Fall       ; PC:inst6|address[1]                                                                                               ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Fall       ; PC:inst6|address[1]                                                                                               ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Fall       ; PC:inst6|address[2]                                                                                               ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Fall       ; PC:inst6|address[2]                                                                                               ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Fall       ; PC:inst6|address[3]                                                                                               ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Fall       ; PC:inst6|address[3]                                                                                               ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Fall       ; PC:inst6|address[4]                                                                                               ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Fall       ; PC:inst6|address[4]                                                                                               ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Fall       ; PC:inst6|address[5]                                                                                               ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Fall       ; PC:inst6|address[5]                                                                                               ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Fall       ; PC:inst6|address[6]                                                                                               ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Fall       ; PC:inst6|address[6]                                                                                               ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Fall       ; PC:inst6|address[7]                                                                                               ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Fall       ; PC:inst6|address[7]                                                                                               ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Fall       ; SM:inst8|SM                                                                                                       ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Fall       ; SM:inst8|SM                                                                                                       ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Fall       ; SRG_group:inst9|a[0]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Fall       ; SRG_group:inst9|a[0]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Fall       ; SRG_group:inst9|a[1]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Fall       ; SRG_group:inst9|a[1]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Fall       ; SRG_group:inst9|a[2]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Fall       ; SRG_group:inst9|a[2]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Fall       ; SRG_group:inst9|a[3]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Fall       ; SRG_group:inst9|a[3]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Fall       ; SRG_group:inst9|a[4]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Fall       ; SRG_group:inst9|a[4]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Fall       ; SRG_group:inst9|a[5]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Fall       ; SRG_group:inst9|a[5]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Fall       ; SRG_group:inst9|a[6]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Fall       ; SRG_group:inst9|a[6]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Fall       ; SRG_group:inst9|a[7]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Fall       ; SRG_group:inst9|a[7]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Fall       ; SRG_group:inst9|b[0]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Fall       ; SRG_group:inst9|b[0]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Fall       ; SRG_group:inst9|b[1]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Fall       ; SRG_group:inst9|b[1]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Fall       ; SRG_group:inst9|b[2]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Fall       ; SRG_group:inst9|b[2]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Fall       ; SRG_group:inst9|b[3]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Fall       ; SRG_group:inst9|b[3]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Fall       ; SRG_group:inst9|b[4]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Fall       ; SRG_group:inst9|b[4]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Fall       ; SRG_group:inst9|b[5]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Fall       ; SRG_group:inst9|b[5]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Fall       ; SRG_group:inst9|b[6]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Fall       ; SRG_group:inst9|b[6]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Fall       ; SRG_group:inst9|b[7]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Fall       ; SRG_group:inst9|b[7]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Fall       ; SRG_group:inst9|c[0]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Fall       ; SRG_group:inst9|c[0]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Fall       ; SRG_group:inst9|c[1]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Fall       ; SRG_group:inst9|c[1]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Fall       ; SRG_group:inst9|c[2]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Fall       ; SRG_group:inst9|c[2]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Fall       ; SRG_group:inst9|c[3]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Fall       ; SRG_group:inst9|c[3]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Fall       ; SRG_group:inst9|c[4]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Fall       ; SRG_group:inst9|c[4]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Fall       ; SRG_group:inst9|c[5]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Fall       ; SRG_group:inst9|c[5]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Fall       ; SRG_group:inst9|c[6]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Fall       ; SRG_group:inst9|c[6]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Fall       ; SRG_group:inst9|c[7]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Fall       ; SRG_group:inst9|c[7]                                                                                              ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Fall       ; Zf_dff:inst14|Zf                                                                                                  ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Fall       ; Zf_dff:inst14|Zf                                                                                                  ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Rise       ; lpm_ram_io:inst13|altram:sram|altsyncram:ram_block|altsyncram_c591:auto_generated|ram_block1a4~porta_address_reg0 ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Rise       ; lpm_ram_io:inst13|altram:sram|altsyncram:ram_block|altsyncram_c591:auto_generated|ram_block1a4~porta_address_reg0 ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Rise       ; lpm_ram_io:inst13|altram:sram|altsyncram:ram_block|altsyncram_c591:auto_generated|ram_block1a4~porta_address_reg1 ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Rise       ; lpm_ram_io:inst13|altram:sram|altsyncram:ram_block|altsyncram_c591:auto_generated|ram_block1a4~porta_address_reg1 ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Rise       ; lpm_ram_io:inst13|altram:sram|altsyncram:ram_block|altsyncram_c591:auto_generated|ram_block1a4~porta_address_reg2 ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Rise       ; lpm_ram_io:inst13|altram:sram|altsyncram:ram_block|altsyncram_c591:auto_generated|ram_block1a4~porta_address_reg2 ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Rise       ; lpm_ram_io:inst13|altram:sram|altsyncram:ram_block|altsyncram_c591:auto_generated|ram_block1a4~porta_address_reg3 ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Rise       ; lpm_ram_io:inst13|altram:sram|altsyncram:ram_block|altsyncram_c591:auto_generated|ram_block1a4~porta_address_reg3 ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Rise       ; lpm_ram_io:inst13|altram:sram|altsyncram:ram_block|altsyncram_c591:auto_generated|ram_block1a4~porta_address_reg4 ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Rise       ; lpm_ram_io:inst13|altram:sram|altsyncram:ram_block|altsyncram_c591:auto_generated|ram_block1a4~porta_address_reg4 ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Rise       ; lpm_ram_io:inst13|altram:sram|altsyncram:ram_block|altsyncram_c591:auto_generated|ram_block1a4~porta_address_reg5 ;
+; -1.318 ; 0.500        ; 1.818          ; Low Pulse Width  ; clock ; Rise       ; lpm_ram_io:inst13|altram:sram|altsyncram:ram_block|altsyncram_c591:auto_generated|ram_block1a4~porta_address_reg5 ;
+; -1.318 ; 0.500        ; 1.818          ; High Pulse Width ; clock ; Rise       ; lpm_ram_io:inst13|altram:sram|altsyncram:ram_block|altsyncram_c591:auto_generated|ram_block1a4~porta_address_reg6 ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; IN[*]     ; clock      ; 11.790 ; 11.790 ; Rise       ; clock           ;
+;  IN[0]    ; clock      ; 9.533  ; 9.533  ; Rise       ; clock           ;
+;  IN[1]    ; clock      ; 11.790 ; 11.790 ; Rise       ; clock           ;
+;  IN[2]    ; clock      ; 9.022  ; 9.022  ; Rise       ; clock           ;
+;  IN[3]    ; clock      ; 9.401  ; 9.401  ; Rise       ; clock           ;
+;  IN[4]    ; clock      ; 8.627  ; 8.627  ; Rise       ; clock           ;
+;  IN[5]    ; clock      ; 9.726  ; 9.726  ; Rise       ; clock           ;
+;  IN[6]    ; clock      ; 9.723  ; 9.723  ; Rise       ; clock           ;
+;  IN[7]    ; clock      ; 9.855  ; 9.855  ; Rise       ; clock           ;
+; IN[*]     ; clock      ; 11.341 ; 11.341 ; Fall       ; clock           ;
+;  IN[0]    ; clock      ; 8.343  ; 8.343  ; Fall       ; clock           ;
+;  IN[1]    ; clock      ; 11.341 ; 11.341 ; Fall       ; clock           ;
+;  IN[2]    ; clock      ; 9.170  ; 9.170  ; Fall       ; clock           ;
+;  IN[3]    ; clock      ; 9.421  ; 9.421  ; Fall       ; clock           ;
+;  IN[4]    ; clock      ; 8.640  ; 8.640  ; Fall       ; clock           ;
+;  IN[5]    ; clock      ; 8.406  ; 8.406  ; Fall       ; clock           ;
+;  IN[6]    ; clock      ; 8.678  ; 8.678  ; Fall       ; clock           ;
+;  IN[7]    ; clock      ; 9.061  ; 9.061  ; Fall       ; clock           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Hold Times                                                                ;
++-----------+------------+---------+---------+------------+-----------------+
+; Data Port ; Clock Port ; Rise    ; Fall    ; Clock Edge ; Clock Reference ;
++-----------+------------+---------+---------+------------+-----------------+
+; IN[*]     ; clock      ; -8.479  ; -8.479  ; Rise       ; clock           ;
+;  IN[0]    ; clock      ; -9.385  ; -9.385  ; Rise       ; clock           ;
+;  IN[1]    ; clock      ; -11.642 ; -11.642 ; Rise       ; clock           ;
+;  IN[2]    ; clock      ; -8.874  ; -8.874  ; Rise       ; clock           ;
+;  IN[3]    ; clock      ; -9.253  ; -9.253  ; Rise       ; clock           ;
+;  IN[4]    ; clock      ; -8.479  ; -8.479  ; Rise       ; clock           ;
+;  IN[5]    ; clock      ; -9.578  ; -9.578  ; Rise       ; clock           ;
+;  IN[6]    ; clock      ; -9.575  ; -9.575  ; Rise       ; clock           ;
+;  IN[7]    ; clock      ; -9.707  ; -9.707  ; Rise       ; clock           ;
+; IN[*]     ; clock      ; -6.720  ; -6.720  ; Fall       ; clock           ;
+;  IN[0]    ; clock      ; -6.726  ; -6.726  ; Fall       ; clock           ;
+;  IN[1]    ; clock      ; -8.923  ; -8.923  ; Fall       ; clock           ;
+;  IN[2]    ; clock      ; -7.080  ; -7.080  ; Fall       ; clock           ;
+;  IN[3]    ; clock      ; -7.755  ; -7.755  ; Fall       ; clock           ;
+;  IN[4]    ; clock      ; -6.720  ; -6.720  ; Fall       ; clock           ;
+;  IN[5]    ; clock      ; -8.255  ; -8.255  ; Fall       ; clock           ;
+;  IN[6]    ; clock      ; -8.466  ; -8.466  ; Fall       ; clock           ;
+;  IN[7]    ; clock      ; -7.126  ; -7.126  ; Fall       ; clock           ;
++-----------+------------+---------+---------+------------+-----------------+
+
+
++----------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                  ;
++-----------+----------------------+--------+--------+------------+----------------------+
+; Data Port ; Clock Port           ; Rise   ; Fall   ; Clock Edge ; Clock Reference      ;
++-----------+----------------------+--------+--------+------------+----------------------+
+; IR[*]     ; IR:inst4|output_a[0] ; 4.881  ;        ; Rise       ; IR:inst4|output_a[0] ;
+;  IR[4]    ; IR:inst4|output_a[0] ; 4.881  ;        ; Rise       ; IR:inst4|output_a[0] ;
+; LED[*]    ; IR:inst4|output_a[0] ; 15.460 ;        ; Rise       ; IR:inst4|output_a[0] ;
+;  LED[0]   ; IR:inst4|output_a[0] ; 15.460 ;        ; Rise       ; IR:inst4|output_a[0] ;
+;  LED[1]   ; IR:inst4|output_a[0] ; 13.125 ;        ; Rise       ; IR:inst4|output_a[0] ;
+;  LED[2]   ; IR:inst4|output_a[0] ; 14.004 ;        ; Rise       ; IR:inst4|output_a[0] ;
+;  LED[3]   ; IR:inst4|output_a[0] ; 14.563 ;        ; Rise       ; IR:inst4|output_a[0] ;
+;  LED[4]   ; IR:inst4|output_a[0] ; 13.721 ;        ; Rise       ; IR:inst4|output_a[0] ;
+;  LED[5]   ; IR:inst4|output_a[0] ; 13.948 ;        ; Rise       ; IR:inst4|output_a[0] ;
+;  LED[6]   ; IR:inst4|output_a[0] ; 15.077 ;        ; Rise       ; IR:inst4|output_a[0] ;
+;  LED[7]   ; IR:inst4|output_a[0] ; 14.507 ;        ; Rise       ; IR:inst4|output_a[0] ;
+; RAM_DL    ; IR:inst4|output_a[0] ; 10.355 ;        ; Rise       ; IR:inst4|output_a[0] ;
+; RAM_XL    ; IR:inst4|output_a[0] ; 8.771  ;        ; Rise       ; IR:inst4|output_a[0] ;
+; IR[*]     ; IR:inst4|output_a[0] ;        ; 4.881  ; Fall       ; IR:inst4|output_a[0] ;
+;  IR[4]    ; IR:inst4|output_a[0] ;        ; 4.881  ; Fall       ; IR:inst4|output_a[0] ;
+; LED[*]    ; IR:inst4|output_a[0] ;        ; 15.460 ; Fall       ; IR:inst4|output_a[0] ;
+;  LED[0]   ; IR:inst4|output_a[0] ;        ; 15.460 ; Fall       ; IR:inst4|output_a[0] ;
+;  LED[1]   ; IR:inst4|output_a[0] ;        ; 13.125 ; Fall       ; IR:inst4|output_a[0] ;
+;  LED[2]   ; IR:inst4|output_a[0] ;        ; 14.004 ; Fall       ; IR:inst4|output_a[0] ;
+;  LED[3]   ; IR:inst4|output_a[0] ;        ; 14.563 ; Fall       ; IR:inst4|output_a[0] ;
+;  LED[4]   ; IR:inst4|output_a[0] ;        ; 13.721 ; Fall       ; IR:inst4|output_a[0] ;
+;  LED[5]   ; IR:inst4|output_a[0] ;        ; 13.948 ; Fall       ; IR:inst4|output_a[0] ;
+;  LED[6]   ; IR:inst4|output_a[0] ;        ; 15.077 ; Fall       ; IR:inst4|output_a[0] ;
+;  LED[7]   ; IR:inst4|output_a[0] ;        ; 14.507 ; Fall       ; IR:inst4|output_a[0] ;
+; RAM_DL    ; IR:inst4|output_a[0] ;        ; 10.355 ; Fall       ; IR:inst4|output_a[0] ;
+; RAM_XL    ; IR:inst4|output_a[0] ;        ; 8.771  ; Fall       ; IR:inst4|output_a[0] ;
+; LED[*]    ; clock                ; 17.572 ; 17.572 ; Rise       ; clock                ;
+;  LED[0]   ; clock                ; 16.945 ; 16.945 ; Rise       ; clock                ;
+;  LED[1]   ; clock                ; 15.382 ; 15.382 ; Rise       ; clock                ;
+;  LED[2]   ; clock                ; 15.995 ; 15.995 ; Rise       ; clock                ;
+;  LED[3]   ; clock                ; 16.935 ; 16.935 ; Rise       ; clock                ;
+;  LED[4]   ; clock                ; 16.427 ; 16.427 ; Rise       ; clock                ;
+;  LED[5]   ; clock                ; 16.094 ; 16.094 ; Rise       ; clock                ;
+;  LED[6]   ; clock                ; 17.572 ; 17.572 ; Rise       ; clock                ;
+;  LED[7]   ; clock                ; 17.458 ; 17.458 ; Rise       ; clock                ;
+; IR[*]     ; clock                ; 8.981  ; 8.981  ; Fall       ; clock                ;
+;  IR[0]    ; clock                ; 7.310  ; 7.310  ; Fall       ; clock                ;
+;  IR[1]    ; clock                ; 8.082  ; 8.082  ; Fall       ; clock                ;
+;  IR[2]    ; clock                ; 8.201  ; 8.201  ; Fall       ; clock                ;
+;  IR[3]    ; clock                ; 7.699  ; 7.699  ; Fall       ; clock                ;
+;  IR[5]    ; clock                ; 7.576  ; 7.576  ; Fall       ; clock                ;
+;  IR[6]    ; clock                ; 8.702  ; 8.702  ; Fall       ; clock                ;
+;  IR[7]    ; clock                ; 8.981  ; 8.981  ; Fall       ; clock                ;
+; LED[*]    ; clock                ; 21.190 ; 21.190 ; Fall       ; clock                ;
+;  LED[0]   ; clock                ; 20.734 ; 20.734 ; Fall       ; clock                ;
+;  LED[1]   ; clock                ; 18.060 ; 18.060 ; Fall       ; clock                ;
+;  LED[2]   ; clock                ; 19.292 ; 19.292 ; Fall       ; clock                ;
+;  LED[3]   ; clock                ; 19.794 ; 19.794 ; Fall       ; clock                ;
+;  LED[4]   ; clock                ; 19.845 ; 19.845 ; Fall       ; clock                ;
+;  LED[5]   ; clock                ; 20.321 ; 20.321 ; Fall       ; clock                ;
+;  LED[6]   ; clock                ; 21.190 ; 21.190 ; Fall       ; clock                ;
+;  LED[7]   ; clock                ; 20.487 ; 20.487 ; Fall       ; clock                ;
+; PC[*]     ; clock                ; 8.106  ; 8.106  ; Fall       ; clock                ;
+;  PC[0]    ; clock                ; 7.299  ; 7.299  ; Fall       ; clock                ;
+;  PC[1]    ; clock                ; 7.667  ; 7.667  ; Fall       ; clock                ;
+;  PC[2]    ; clock                ; 7.586  ; 7.586  ; Fall       ; clock                ;
+;  PC[3]    ; clock                ; 8.069  ; 8.069  ; Fall       ; clock                ;
+;  PC[4]    ; clock                ; 7.639  ; 7.639  ; Fall       ; clock                ;
+;  PC[5]    ; clock                ; 7.209  ; 7.209  ; Fall       ; clock                ;
+;  PC[6]    ; clock                ; 7.952  ; 7.952  ; Fall       ; clock                ;
+;  PC[7]    ; clock                ; 8.106  ; 8.106  ; Fall       ; clock                ;
+; RAM_DL    ; clock                ; 14.023 ; 14.023 ; Fall       ; clock                ;
+; RAM_XL    ; clock                ; 13.266 ; 13.266 ; Fall       ; clock                ;
+; SM        ; clock                ; 8.463  ; 8.463  ; Fall       ; clock                ;
+; aa[*]     ; clock                ; 9.408  ; 9.408  ; Fall       ; clock                ;
+;  aa[0]    ; clock                ; 8.420  ; 8.420  ; Fall       ; clock                ;
+;  aa[1]    ; clock                ; 8.441  ; 8.441  ; Fall       ; clock                ;
+;  aa[2]    ; clock                ; 8.806  ; 8.806  ; Fall       ; clock                ;
+;  aa[3]    ; clock                ; 8.972  ; 8.972  ; Fall       ; clock                ;
+;  aa[4]    ; clock                ; 9.408  ; 9.408  ; Fall       ; clock                ;
+;  aa[5]    ; clock                ; 8.885  ; 8.885  ; Fall       ; clock                ;
+;  aa[6]    ; clock                ; 8.850  ; 8.850  ; Fall       ; clock                ;
+;  aa[7]    ; clock                ; 8.865  ; 8.865  ; Fall       ; clock                ;
+; bb[*]     ; clock                ; 7.623  ; 7.623  ; Fall       ; clock                ;
+;  bb[0]    ; clock                ; 7.063  ; 7.063  ; Fall       ; clock                ;
+;  bb[1]    ; clock                ; 7.500  ; 7.500  ; Fall       ; clock                ;
+;  bb[2]    ; clock                ; 7.499  ; 7.499  ; Fall       ; clock                ;
+;  bb[3]    ; clock                ; 7.539  ; 7.539  ; Fall       ; clock                ;
+;  bb[4]    ; clock                ; 7.324  ; 7.324  ; Fall       ; clock                ;
+;  bb[5]    ; clock                ; 7.227  ; 7.227  ; Fall       ; clock                ;
+;  bb[6]    ; clock                ; 7.619  ; 7.619  ; Fall       ; clock                ;
+;  bb[7]    ; clock                ; 7.623  ; 7.623  ; Fall       ; clock                ;
+; cc[*]     ; clock                ; 9.284  ; 9.284  ; Fall       ; clock                ;
+;  cc[0]    ; clock                ; 8.392  ; 8.392  ; Fall       ; clock                ;
+;  cc[1]    ; clock                ; 8.433  ; 8.433  ; Fall       ; clock                ;
+;  cc[2]    ; clock                ; 8.472  ; 8.472  ; Fall       ; clock                ;
+;  cc[3]    ; clock                ; 6.798  ; 6.798  ; Fall       ; clock                ;
+;  cc[4]    ; clock                ; 6.854  ; 6.854  ; Fall       ; clock                ;
+;  cc[5]    ; clock                ; 9.051  ; 9.051  ; Fall       ; clock                ;
+;  cc[6]    ; clock                ; 9.284  ; 9.284  ; Fall       ; clock                ;
+;  cc[7]    ; clock                ; 8.362  ; 8.362  ; Fall       ; clock                ;
++-----------+----------------------+--------+--------+------------+----------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                          ;
++-----------+----------------------+--------+--------+------------+----------------------+
+; Data Port ; Clock Port           ; Rise   ; Fall   ; Clock Edge ; Clock Reference      ;
++-----------+----------------------+--------+--------+------------+----------------------+
+; IR[*]     ; IR:inst4|output_a[0] ; 4.881  ;        ; Rise       ; IR:inst4|output_a[0] ;
+;  IR[4]    ; IR:inst4|output_a[0] ; 4.881  ;        ; Rise       ; IR:inst4|output_a[0] ;
+; LED[*]    ; IR:inst4|output_a[0] ; 7.250  ;        ; Rise       ; IR:inst4|output_a[0] ;
+;  LED[0]   ; IR:inst4|output_a[0] ; 8.036  ;        ; Rise       ; IR:inst4|output_a[0] ;
+;  LED[1]   ; IR:inst4|output_a[0] ; 7.396  ;        ; Rise       ; IR:inst4|output_a[0] ;
+;  LED[2]   ; IR:inst4|output_a[0] ; 7.628  ;        ; Rise       ; IR:inst4|output_a[0] ;
+;  LED[3]   ; IR:inst4|output_a[0] ; 8.394  ;        ; Rise       ; IR:inst4|output_a[0] ;
+;  LED[4]   ; IR:inst4|output_a[0] ; 7.398  ;        ; Rise       ; IR:inst4|output_a[0] ;
+;  LED[5]   ; IR:inst4|output_a[0] ; 7.250  ;        ; Rise       ; IR:inst4|output_a[0] ;
+;  LED[6]   ; IR:inst4|output_a[0] ; 8.400  ;        ; Rise       ; IR:inst4|output_a[0] ;
+;  LED[7]   ; IR:inst4|output_a[0] ; 8.400  ;        ; Rise       ; IR:inst4|output_a[0] ;
+; RAM_DL    ; IR:inst4|output_a[0] ; 8.505  ;        ; Rise       ; IR:inst4|output_a[0] ;
+; RAM_XL    ; IR:inst4|output_a[0] ; 8.771  ;        ; Rise       ; IR:inst4|output_a[0] ;
+; IR[*]     ; IR:inst4|output_a[0] ;        ; 4.881  ; Fall       ; IR:inst4|output_a[0] ;
+;  IR[4]    ; IR:inst4|output_a[0] ;        ; 4.881  ; Fall       ; IR:inst4|output_a[0] ;
+; LED[*]    ; IR:inst4|output_a[0] ;        ; 7.250  ; Fall       ; IR:inst4|output_a[0] ;
+;  LED[0]   ; IR:inst4|output_a[0] ;        ; 8.036  ; Fall       ; IR:inst4|output_a[0] ;
+;  LED[1]   ; IR:inst4|output_a[0] ;        ; 7.396  ; Fall       ; IR:inst4|output_a[0] ;
+;  LED[2]   ; IR:inst4|output_a[0] ;        ; 7.628  ; Fall       ; IR:inst4|output_a[0] ;
+;  LED[3]   ; IR:inst4|output_a[0] ;        ; 8.394  ; Fall       ; IR:inst4|output_a[0] ;
+;  LED[4]   ; IR:inst4|output_a[0] ;        ; 7.398  ; Fall       ; IR:inst4|output_a[0] ;
+;  LED[5]   ; IR:inst4|output_a[0] ;        ; 7.250  ; Fall       ; IR:inst4|output_a[0] ;
+;  LED[6]   ; IR:inst4|output_a[0] ;        ; 8.400  ; Fall       ; IR:inst4|output_a[0] ;
+;  LED[7]   ; IR:inst4|output_a[0] ;        ; 8.400  ; Fall       ; IR:inst4|output_a[0] ;
+; RAM_DL    ; IR:inst4|output_a[0] ;        ; 8.505  ; Fall       ; IR:inst4|output_a[0] ;
+; RAM_XL    ; IR:inst4|output_a[0] ;        ; 8.771  ; Fall       ; IR:inst4|output_a[0] ;
+; LED[*]    ; clock                ; 15.382 ; 15.382 ; Rise       ; clock                ;
+;  LED[0]   ; clock                ; 16.945 ; 16.945 ; Rise       ; clock                ;
+;  LED[1]   ; clock                ; 15.382 ; 15.382 ; Rise       ; clock                ;
+;  LED[2]   ; clock                ; 15.995 ; 15.995 ; Rise       ; clock                ;
+;  LED[3]   ; clock                ; 16.935 ; 16.935 ; Rise       ; clock                ;
+;  LED[4]   ; clock                ; 16.427 ; 16.427 ; Rise       ; clock                ;
+;  LED[5]   ; clock                ; 16.094 ; 16.094 ; Rise       ; clock                ;
+;  LED[6]   ; clock                ; 17.572 ; 17.572 ; Rise       ; clock                ;
+;  LED[7]   ; clock                ; 17.458 ; 17.458 ; Rise       ; clock                ;
+; IR[*]     ; clock                ; 7.310  ; 7.310  ; Fall       ; clock                ;
+;  IR[0]    ; clock                ; 7.310  ; 7.310  ; Fall       ; clock                ;
+;  IR[1]    ; clock                ; 8.082  ; 8.082  ; Fall       ; clock                ;
+;  IR[2]    ; clock                ; 8.201  ; 8.201  ; Fall       ; clock                ;
+;  IR[3]    ; clock                ; 7.699  ; 7.699  ; Fall       ; clock                ;
+;  IR[5]    ; clock                ; 7.576  ; 7.576  ; Fall       ; clock                ;
+;  IR[6]    ; clock                ; 8.702  ; 8.702  ; Fall       ; clock                ;
+;  IR[7]    ; clock                ; 8.981  ; 8.981  ; Fall       ; clock                ;
+; LED[*]    ; clock                ; 8.514  ; 8.514  ; Fall       ; clock                ;
+;  LED[0]   ; clock                ; 9.300  ; 9.300  ; Fall       ; clock                ;
+;  LED[1]   ; clock                ; 8.660  ; 8.660  ; Fall       ; clock                ;
+;  LED[2]   ; clock                ; 8.892  ; 8.892  ; Fall       ; clock                ;
+;  LED[3]   ; clock                ; 9.658  ; 9.658  ; Fall       ; clock                ;
+;  LED[4]   ; clock                ; 8.662  ; 8.662  ; Fall       ; clock                ;
+;  LED[5]   ; clock                ; 8.514  ; 8.514  ; Fall       ; clock                ;
+;  LED[6]   ; clock                ; 9.664  ; 9.664  ; Fall       ; clock                ;
+;  LED[7]   ; clock                ; 9.664  ; 9.664  ; Fall       ; clock                ;
+; PC[*]     ; clock                ; 7.209  ; 7.209  ; Fall       ; clock                ;
+;  PC[0]    ; clock                ; 7.299  ; 7.299  ; Fall       ; clock                ;
+;  PC[1]    ; clock                ; 7.667  ; 7.667  ; Fall       ; clock                ;
+;  PC[2]    ; clock                ; 7.586  ; 7.586  ; Fall       ; clock                ;
+;  PC[3]    ; clock                ; 8.069  ; 8.069  ; Fall       ; clock                ;
+;  PC[4]    ; clock                ; 7.639  ; 7.639  ; Fall       ; clock                ;
+;  PC[5]    ; clock                ; 7.209  ; 7.209  ; Fall       ; clock                ;
+;  PC[6]    ; clock                ; 7.952  ; 7.952  ; Fall       ; clock                ;
+;  PC[7]    ; clock                ; 8.106  ; 8.106  ; Fall       ; clock                ;
+; RAM_DL    ; clock                ; 9.740  ; 9.740  ; Fall       ; clock                ;
+; RAM_XL    ; clock                ; 10.666 ; 10.666 ; Fall       ; clock                ;
+; SM        ; clock                ; 8.463  ; 8.463  ; Fall       ; clock                ;
+; aa[*]     ; clock                ; 8.420  ; 8.420  ; Fall       ; clock                ;
+;  aa[0]    ; clock                ; 8.420  ; 8.420  ; Fall       ; clock                ;
+;  aa[1]    ; clock                ; 8.441  ; 8.441  ; Fall       ; clock                ;
+;  aa[2]    ; clock                ; 8.806  ; 8.806  ; Fall       ; clock                ;
+;  aa[3]    ; clock                ; 8.972  ; 8.972  ; Fall       ; clock                ;
+;  aa[4]    ; clock                ; 9.408  ; 9.408  ; Fall       ; clock                ;
+;  aa[5]    ; clock                ; 8.885  ; 8.885  ; Fall       ; clock                ;
+;  aa[6]    ; clock                ; 8.850  ; 8.850  ; Fall       ; clock                ;
+;  aa[7]    ; clock                ; 8.865  ; 8.865  ; Fall       ; clock                ;
+; bb[*]     ; clock                ; 7.063  ; 7.063  ; Fall       ; clock                ;
+;  bb[0]    ; clock                ; 7.063  ; 7.063  ; Fall       ; clock                ;
+;  bb[1]    ; clock                ; 7.500  ; 7.500  ; Fall       ; clock                ;
+;  bb[2]    ; clock                ; 7.499  ; 7.499  ; Fall       ; clock                ;
+;  bb[3]    ; clock                ; 7.539  ; 7.539  ; Fall       ; clock                ;
+;  bb[4]    ; clock                ; 7.324  ; 7.324  ; Fall       ; clock                ;
+;  bb[5]    ; clock                ; 7.227  ; 7.227  ; Fall       ; clock                ;
+;  bb[6]    ; clock                ; 7.619  ; 7.619  ; Fall       ; clock                ;
+;  bb[7]    ; clock                ; 7.623  ; 7.623  ; Fall       ; clock                ;
+; cc[*]     ; clock                ; 6.798  ; 6.798  ; Fall       ; clock                ;
+;  cc[0]    ; clock                ; 8.392  ; 8.392  ; Fall       ; clock                ;
+;  cc[1]    ; clock                ; 8.433  ; 8.433  ; Fall       ; clock                ;
+;  cc[2]    ; clock                ; 8.472  ; 8.472  ; Fall       ; clock                ;
+;  cc[3]    ; clock                ; 6.798  ; 6.798  ; Fall       ; clock                ;
+;  cc[4]    ; clock                ; 6.854  ; 6.854  ; Fall       ; clock                ;
+;  cc[5]    ; clock                ; 9.051  ; 9.051  ; Fall       ; clock                ;
+;  cc[6]    ; clock                ; 9.284  ; 9.284  ; Fall       ; clock                ;
+;  cc[7]    ; clock                ; 8.362  ; 8.362  ; Fall       ; clock                ;
++-----------+----------------------+--------+--------+------------+----------------------+
+
+
++------------------------------------------------------+
+; Propagation Delay                                    ;
++------------+-------------+--------+----+----+--------+
+; Input Port ; Output Port ; RR     ; RF ; FR ; FF     ;
++------------+-------------+--------+----+----+--------+
+; IN[0]      ; LED[0]      ; 14.364 ;    ;    ; 14.364 ;
+; IN[1]      ; LED[1]      ; 13.934 ;    ;    ; 13.934 ;
+; IN[2]      ; LED[2]      ; 13.788 ;    ;    ; 13.788 ;
+; IN[3]      ; LED[3]      ; 14.238 ;    ;    ; 14.238 ;
+; IN[4]      ; LED[4]      ; 12.999 ;    ;    ; 12.999 ;
+; IN[5]      ; LED[5]      ; 13.909 ;    ;    ; 13.909 ;
+; IN[6]      ; LED[6]      ; 15.036 ;    ;    ; 15.036 ;
+; IN[7]      ; LED[7]      ; 14.861 ;    ;    ; 14.861 ;
++------------+-------------+--------+----+----+--------+
+
+
++------------------------------------------------------+
+; Minimum Propagation Delay                            ;
++------------+-------------+--------+----+----+--------+
+; Input Port ; Output Port ; RR     ; RF ; FR ; FF     ;
++------------+-------------+--------+----+----+--------+
+; IN[0]      ; LED[0]      ; 14.364 ;    ;    ; 14.364 ;
+; IN[1]      ; LED[1]      ; 13.934 ;    ;    ; 13.934 ;
+; IN[2]      ; LED[2]      ; 13.788 ;    ;    ; 13.788 ;
+; IN[3]      ; LED[3]      ; 14.238 ;    ;    ; 14.238 ;
+; IN[4]      ; LED[4]      ; 12.999 ;    ;    ; 12.999 ;
+; IN[5]      ; LED[5]      ; 13.909 ;    ;    ; 13.909 ;
+; IN[6]      ; LED[6]      ; 15.036 ;    ;    ; 15.036 ;
+; IN[7]      ; LED[7]      ; 14.861 ;    ;    ; 14.861 ;
++------------+-------------+--------+----+----+--------+
+
+
++-----------------------------------------------------------------------------------------+
+; Setup Transfers                                                                         ;
++----------------------+----------------------+----------+----------+----------+----------+
+; From Clock           ; To Clock             ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++----------------------+----------------------+----------+----------+----------+----------+
+; clock                ; clock                ; 72       ; 7489     ; 320      ; 37651    ;
+; IR:inst4|output_a[0] ; clock                ; 532      ; 532      ; 2723     ; 2733     ;
+; clock                ; IR:inst4|output_a[0] ; 0        ; 0        ; 0        ; 1140     ;
+; IR:inst4|output_a[0] ; IR:inst4|output_a[0] ; 0        ; 0        ; 76       ; 76       ;
++----------------------+----------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------------------------+
+; Hold Transfers                                                                          ;
++----------------------+----------------------+----------+----------+----------+----------+
+; From Clock           ; To Clock             ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++----------------------+----------------------+----------+----------+----------+----------+
+; clock                ; clock                ; 72       ; 7489     ; 320      ; 37651    ;
+; IR:inst4|output_a[0] ; clock                ; 532      ; 532      ; 2723     ; 2733     ;
+; clock                ; IR:inst4|output_a[0] ; 0        ; 0        ; 0        ; 1140     ;
+; IR:inst4|output_a[0] ; IR:inst4|output_a[0] ; 0        ; 0        ; 76       ; 76       ;
++----------------------+----------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design.
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design.
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 8     ; 8    ;
+; Unconstrained Input Port Paths  ; 56    ; 56   ;
+; Unconstrained Output Ports      ; 51    ; 51   ;
+; Unconstrained Output Port Paths ; 368   ; 368  ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II TimeQuest Timing Analyzer
+    Info: Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sat Jan 02 16:44:55 2021
+Info: Command: quartus_sta CPU -c CPU
+Info: qsta_default_script.tcl version: #1
+Warning: Found USE_TIMEQUEST_TIMING_ANALYZER=OFF. The TimeQuest Timing Analyzer is not the default Timing Analysis Tool during full compilation.
+Warning: Timing Analysis is analyzing one or more combinational loops as latches
+    Warning: Node "inst|temp[8]|combout" is a latch
+    Warning: Node "inst|temp[3]|combout" is a latch
+    Warning: Node "inst|temp[1]|combout" is a latch
+    Warning: Node "inst|temp[4]|combout" is a latch
+    Warning: Node "inst|temp[2]|combout" is a latch
+    Warning: Node "inst|temp[7]|combout" is a latch
+    Warning: Node "inst|temp[5]|combout" is a latch
+    Warning: Node "inst|temp[0]|combout" is a latch
+    Warning: Node "inst|temp[6]|combout" is a latch
+Critical Warning: Synopsys Design Constraints File file not found: 'CPU.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info: No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info: Deriving Clocks
+    Info: create_clock -period 1.000 -name clock clock
+    Info: create_clock -period 1.000 -name IR:inst4|output_a[0] IR:inst4|output_a[0]
+Critical Warning: Timing requirements not met
+Info: Worst-case setup slack is -15.638
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:   -15.638      -807.819 clock 
+    Info:    -5.680       -43.709 IR:inst4|output_a[0] 
+Info: Worst-case hold slack is -2.563
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -2.563       -14.548 IR:inst4|output_a[0] 
+    Info:     0.771         0.000 clock 
+Info: No recovery paths to report
+Info: No removal paths to report
+Critical Warning: Found minimum pulse width or period violations. See Report Minimum Pulse Width for details.
+Info: The selected device family is not supported by the report_metastability command.
+Info: Design is not fully constrained for setup requirements
+Info: Design is not fully constrained for hold requirements
+Info: Quartus II TimeQuest Timing Analyzer was successful. 0 errors, 14 warnings
+    Info: Peak virtual memory: 196 megabytes
+    Info: Processing ended: Sat Jan 02 16:44:56 2021
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

@@ -1,0 +1,579 @@
+Simulator report for CPU
+Sat Jan 02 13:45:05 2021
+Quartus II Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. |CPU|lpm_ram_io:inst13|altram:sram|altsyncram:ram_block|altsyncram_c591:auto_generated|ALTSYNCRAM
+  6. Coverage Summary
+  7. Complete 1/0-Value Coverage
+  8. Missing 1-Value Coverage
+  9. Missing 0-Value Coverage
+ 10. Simulator INI Usage
+ 11. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 289 nodes    ;
+; Simulation Coverage         ;      86.06 % ;
+; Total Number of Transitions ; 9056         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone      ;
+; Device                      ; EP1C3T100C8  ;
++-----------------------------+--------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                           ;
++--------------------------------------------------------------------------------------------+-----------------+---------------+
+; Option                                                                                     ; Setting         ; Default Value ;
++--------------------------------------------------------------------------------------------+-----------------+---------------+
+; Simulation mode                                                                            ; Timing          ; Timing        ;
+; Start time                                                                                 ; 0 ns            ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF            ;               ;
+; Vector input source                                                                        ; CPU时序仿真.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On              ; On            ;
+; Check outputs                                                                              ; Off             ; Off           ;
+; Report simulation coverage                                                                 ; On              ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On              ; On            ;
+; Display missing 1-value coverage report                                                    ; On              ; On            ;
+; Display missing 0-value coverage report                                                    ; On              ; On            ;
+; Detect setup and hold time violations                                                      ; Off             ; Off           ;
+; Detect glitches                                                                            ; Off             ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off             ; Off           ;
+; Generate Signal Activity File                                                              ; Off             ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off             ; Off           ;
+; Group bus channels in simulation results                                                   ; Off             ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On              ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE      ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off             ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; On              ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto            ; Auto          ;
++--------------------------------------------------------------------------------------------+-----------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++---------------------------------------------------------------------------------------------------+
+; |CPU|lpm_ram_io:inst13|altram:sram|altsyncram:ram_block|altsyncram_c591:auto_generated|ALTSYNCRAM ;
++---------------------------------------------------------------------------------------------------+
+Memory report data cannot be output to ASCII.
+Please use Quartus II to view the memory report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      86.06 % ;
+; Total nodes checked                                 ; 289          ;
+; Total output ports checked                          ; 373          ;
+; Total output ports with complete 1/0-value coverage ; 321          ;
+; Total output ports with no 1/0-value coverage       ; 33           ;
+; Total output ports with no 1-value coverage         ; 33           ;
+; Total output ports with no 0-value coverage         ; 52           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                                                                            ;
++-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                           ; Output Port Name                                                                              ; Output Port Type ;
++-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+------------------+
+; |CPU|PC:inst6|address[3]                                                                            ; |CPU|PC:inst6|address[3]~25                                                                   ; cout0            ;
+; |CPU|PC:inst6|address[3]                                                                            ; |CPU|PC:inst6|address[3]~25COUT1_47                                                           ; cout1            ;
+; |CPU|PC:inst6|address[2]                                                                            ; |CPU|PC:inst6|address[2]~27                                                                   ; cout0            ;
+; |CPU|PC:inst6|address[2]                                                                            ; |CPU|PC:inst6|address[2]~27COUT1_45                                                           ; cout1            ;
+; |CPU|PC:inst6|address[1]                                                                            ; |CPU|PC:inst6|address[1]~29                                                                   ; cout0            ;
+; |CPU|PC:inst6|address[1]                                                                            ; |CPU|PC:inst6|address[1]~29COUT1_43                                                           ; cout1            ;
+; |CPU|PC:inst6|address[0]                                                                            ; |CPU|PC:inst6|address[0]~31                                                                   ; cout0            ;
+; |CPU|PC:inst6|address[0]                                                                            ; |CPU|PC:inst6|address[0]~31COUT1_41                                                           ; cout1            ;
+; |CPU|lpm_ram_io:inst13|altram:sram|altsyncram:ram_block|altsyncram_c591:auto_generated|ram_block1a4 ; |CPU|lpm_ram_io:inst13|altram:sram|altsyncram:ram_block|altsyncram_c591:auto_generated|q_a[4] ; portadataout0    ;
+; |CPU|lpm_ram_io:inst13|altram:sram|altsyncram:ram_block|altsyncram_c591:auto_generated|ram_block1a4 ; |CPU|lpm_ram_io:inst13|altram:sram|altsyncram:ram_block|altsyncram_c591:auto_generated|q_a[5] ; portadataout1    ;
+; |CPU|lpm_ram_io:inst13|altram:sram|altsyncram:ram_block|altsyncram_c591:auto_generated|ram_block1a4 ; |CPU|lpm_ram_io:inst13|altram:sram|altsyncram:ram_block|altsyncram_c591:auto_generated|q_a[6] ; portadataout2    ;
+; |CPU|lpm_ram_io:inst13|altram:sram|altsyncram:ram_block|altsyncram_c591:auto_generated|ram_block1a4 ; |CPU|lpm_ram_io:inst13|altram:sram|altsyncram:ram_block|altsyncram_c591:auto_generated|q_a[7] ; portadataout3    ;
+; |CPU|lpm_ram_io:inst13|altram:sram|altsyncram:ram_block|altsyncram_c591:auto_generated|ram_block1a4 ; |CPU|lpm_ram_io:inst13|altram:sram|altsyncram:ram_block|altsyncram_c591:auto_generated|q_a[0] ; portadataout4    ;
+; |CPU|lpm_ram_io:inst13|altram:sram|altsyncram:ram_block|altsyncram_c591:auto_generated|ram_block1a4 ; |CPU|lpm_ram_io:inst13|altram:sram|altsyncram:ram_block|altsyncram_c591:auto_generated|q_a[1] ; portadataout5    ;
+; |CPU|lpm_ram_io:inst13|altram:sram|altsyncram:ram_block|altsyncram_c591:auto_generated|ram_block1a4 ; |CPU|lpm_ram_io:inst13|altram:sram|altsyncram:ram_block|altsyncram_c591:auto_generated|q_a[2] ; portadataout6    ;
+; |CPU|lpm_ram_io:inst13|altram:sram|altsyncram:ram_block|altsyncram_c591:auto_generated|ram_block1a4 ; |CPU|lpm_ram_io:inst13|altram:sram|altsyncram:ram_block|altsyncram_c591:auto_generated|q_a[3] ; portadataout7    ;
+; |CPU|ALU:inst|lpm_add_sub:Add0~0                                                                    ; |CPU|ALU:inst|lpm_add_sub:Add0~0                                                              ; combout          ;
+; |CPU|ALU:inst|lpm_add_sub:Add0~0                                                                    ; |CPU|ALU:inst|lpm_add_sub:Add0~1                                                              ; cout             ;
+; |CPU|ALU:inst|Add1~0                                                                                ; |CPU|ALU:inst|Add1~0                                                                          ; combout          ;
+; |CPU|ALU:inst|Add1~0                                                                                ; |CPU|ALU:inst|Add1~1                                                                          ; cout             ;
+; |CPU|ALU:inst|lpm_add_sub:Add0~2                                                                    ; |CPU|ALU:inst|lpm_add_sub:Add0~2                                                              ; combout          ;
+; |CPU|ALU:inst|lpm_add_sub:Add0~2                                                                    ; |CPU|ALU:inst|lpm_add_sub:Add0~3                                                              ; cout0            ;
+; |CPU|ALU:inst|lpm_add_sub:Add0~2                                                                    ; |CPU|ALU:inst|lpm_add_sub:Add0~3COUT1_32                                                      ; cout1            ;
+; |CPU|ALU:inst|Add1~2                                                                                ; |CPU|ALU:inst|Add1~2                                                                          ; combout          ;
+; |CPU|ALU:inst|Add1~2                                                                                ; |CPU|ALU:inst|Add1~3                                                                          ; cout0            ;
+; |CPU|ALU:inst|Add1~2                                                                                ; |CPU|ALU:inst|Add1~3COUT1_32                                                                  ; cout1            ;
+; |CPU|ALU:inst|lpm_add_sub:Add0~4                                                                    ; |CPU|ALU:inst|lpm_add_sub:Add0~4                                                              ; combout          ;
+; |CPU|ALU:inst|lpm_add_sub:Add0~4                                                                    ; |CPU|ALU:inst|lpm_add_sub:Add0~5                                                              ; cout0            ;
+; |CPU|ALU:inst|lpm_add_sub:Add0~4                                                                    ; |CPU|ALU:inst|lpm_add_sub:Add0~5COUT1_30                                                      ; cout1            ;
+; |CPU|ALU:inst|Add1~4                                                                                ; |CPU|ALU:inst|Add1~4                                                                          ; combout          ;
+; |CPU|ALU:inst|Add1~4                                                                                ; |CPU|ALU:inst|Add1~5                                                                          ; cout0            ;
+; |CPU|ALU:inst|Add1~4                                                                                ; |CPU|ALU:inst|Add1~5COUT1_30                                                                  ; cout1            ;
+; |CPU|ALU:inst|lpm_add_sub:Add0~6                                                                    ; |CPU|ALU:inst|lpm_add_sub:Add0~6                                                              ; combout          ;
+; |CPU|ALU:inst|lpm_add_sub:Add0~6                                                                    ; |CPU|ALU:inst|lpm_add_sub:Add0~7                                                              ; cout0            ;
+; |CPU|ALU:inst|lpm_add_sub:Add0~6                                                                    ; |CPU|ALU:inst|lpm_add_sub:Add0~7COUT1_34                                                      ; cout1            ;
+; |CPU|ALU:inst|Add1~6                                                                                ; |CPU|ALU:inst|Add1~6                                                                          ; combout          ;
+; |CPU|ALU:inst|Add1~6                                                                                ; |CPU|ALU:inst|Add1~7                                                                          ; cout0            ;
+; |CPU|ALU:inst|Add1~6                                                                                ; |CPU|ALU:inst|Add1~7COUT1_34                                                                  ; cout1            ;
+; |CPU|ALU:inst|lpm_add_sub:Add0~8                                                                    ; |CPU|ALU:inst|lpm_add_sub:Add0~8                                                              ; combout          ;
+; |CPU|ALU:inst|Add1~8                                                                                ; |CPU|ALU:inst|Add1~8                                                                          ; combout          ;
+; |CPU|ALU:inst|lpm_add_sub:Add0~10                                                                   ; |CPU|ALU:inst|lpm_add_sub:Add0~10                                                             ; combout          ;
+; |CPU|ALU:inst|lpm_add_sub:Add0~10                                                                   ; |CPU|ALU:inst|lpm_add_sub:Add0~11                                                             ; cout0            ;
+; |CPU|ALU:inst|lpm_add_sub:Add0~10                                                                   ; |CPU|ALU:inst|lpm_add_sub:Add0~11COUT1_24                                                     ; cout1            ;
+; |CPU|ALU:inst|Add1~10                                                                               ; |CPU|ALU:inst|Add1~10                                                                         ; combout          ;
+; |CPU|ALU:inst|Add1~10                                                                               ; |CPU|ALU:inst|Add1~11                                                                         ; cout0            ;
+; |CPU|ALU:inst|Add1~10                                                                               ; |CPU|ALU:inst|Add1~11COUT1_24                                                                 ; cout1            ;
+; |CPU|ALU:inst|lpm_add_sub:Add0~12                                                                   ; |CPU|ALU:inst|lpm_add_sub:Add0~12                                                             ; combout          ;
+; |CPU|ALU:inst|lpm_add_sub:Add0~12                                                                   ; |CPU|ALU:inst|lpm_add_sub:Add0~13                                                             ; cout0            ;
+; |CPU|ALU:inst|lpm_add_sub:Add0~12                                                                   ; |CPU|ALU:inst|lpm_add_sub:Add0~13COUT1_26                                                     ; cout1            ;
+; |CPU|ALU:inst|Add1~12                                                                               ; |CPU|ALU:inst|Add1~12                                                                         ; combout          ;
+; |CPU|ALU:inst|Add1~12                                                                               ; |CPU|ALU:inst|Add1~13                                                                         ; cout0            ;
+; |CPU|ALU:inst|Add1~12                                                                               ; |CPU|ALU:inst|Add1~13COUT1_26                                                                 ; cout1            ;
+; |CPU|ALU:inst|lpm_add_sub:Add0~14                                                                   ; |CPU|ALU:inst|lpm_add_sub:Add0~14                                                             ; combout          ;
+; |CPU|ALU:inst|lpm_add_sub:Add0~14                                                                   ; |CPU|ALU:inst|lpm_add_sub:Add0~15                                                             ; cout0            ;
+; |CPU|ALU:inst|lpm_add_sub:Add0~14                                                                   ; |CPU|ALU:inst|lpm_add_sub:Add0~15COUT1_28                                                     ; cout1            ;
+; |CPU|ALU:inst|Add1~14                                                                               ; |CPU|ALU:inst|Add1~14                                                                         ; combout          ;
+; |CPU|ALU:inst|Add1~14                                                                               ; |CPU|ALU:inst|Add1~15                                                                         ; cout0            ;
+; |CPU|ALU:inst|Add1~14                                                                               ; |CPU|ALU:inst|Add1~15COUT1_28                                                                 ; cout1            ;
+; |CPU|ALU:inst|lpm_add_sub:Add0|alt_stratix_add_sub:stratix_adder|add_sub_cell[8]                    ; |CPU|ALU:inst|lpm_add_sub:Add0|alt_stratix_add_sub:stratix_adder|add_sub_cell[8]              ; combout          ;
+; |CPU|ALU:inst|lpm_add_sub:Add0|alt_stratix_add_sub:stratix_adder|add_sub_cell[1]                    ; |CPU|ALU:inst|lpm_add_sub:Add0|alt_stratix_add_sub:stratix_adder|add_sub_cell[1]              ; combout          ;
+; |CPU|ALU:inst|lpm_add_sub:Add0|alt_stratix_add_sub:stratix_adder|add_sub_cell[1]                    ; |CPU|ALU:inst|lpm_add_sub:Add0|alt_stratix_add_sub:stratix_adder|add_sub_cell[1]~COUT         ; cout0            ;
+; |CPU|ALU:inst|lpm_add_sub:Add0|alt_stratix_add_sub:stratix_adder|add_sub_cell[1]                    ; |CPU|ALU:inst|lpm_add_sub:Add0|alt_stratix_add_sub:stratix_adder|add_sub_cell[1]~COUTCOUT1_12 ; cout1            ;
+; |CPU|ALU:inst|lpm_add_sub:Add0|alt_stratix_add_sub:stratix_adder|add_sub_cell[2]                    ; |CPU|ALU:inst|lpm_add_sub:Add0|alt_stratix_add_sub:stratix_adder|add_sub_cell[2]              ; combout          ;
+; |CPU|ALU:inst|lpm_add_sub:Add0|alt_stratix_add_sub:stratix_adder|add_sub_cell[2]                    ; |CPU|ALU:inst|lpm_add_sub:Add0|alt_stratix_add_sub:stratix_adder|add_sub_cell[2]~COUT         ; cout0            ;
+; |CPU|ALU:inst|lpm_add_sub:Add0|alt_stratix_add_sub:stratix_adder|add_sub_cell[2]                    ; |CPU|ALU:inst|lpm_add_sub:Add0|alt_stratix_add_sub:stratix_adder|add_sub_cell[2]~COUTCOUT1_14 ; cout1            ;
+; |CPU|ALU:inst|lpm_add_sub:Add0|alt_stratix_add_sub:stratix_adder|add_sub_cell[3]                    ; |CPU|ALU:inst|lpm_add_sub:Add0|alt_stratix_add_sub:stratix_adder|add_sub_cell[3]              ; combout          ;
+; |CPU|ALU:inst|lpm_add_sub:Add0|alt_stratix_add_sub:stratix_adder|add_sub_cell[3]                    ; |CPU|ALU:inst|lpm_add_sub:Add0|alt_stratix_add_sub:stratix_adder|add_sub_cell[3]~COUT         ; cout0            ;
+; |CPU|ALU:inst|lpm_add_sub:Add0|alt_stratix_add_sub:stratix_adder|add_sub_cell[3]                    ; |CPU|ALU:inst|lpm_add_sub:Add0|alt_stratix_add_sub:stratix_adder|add_sub_cell[3]~COUTCOUT1_16 ; cout1            ;
+; |CPU|ALU:inst|lpm_add_sub:Add0|alt_stratix_add_sub:stratix_adder|add_sub_cell[4]                    ; |CPU|ALU:inst|lpm_add_sub:Add0|alt_stratix_add_sub:stratix_adder|add_sub_cell[4]              ; combout          ;
+; |CPU|ALU:inst|lpm_add_sub:Add0|alt_stratix_add_sub:stratix_adder|add_sub_cell[4]                    ; |CPU|ALU:inst|lpm_add_sub:Add0|alt_stratix_add_sub:stratix_adder|add_sub_cell[4]~COUT         ; cout             ;
+; |CPU|ALU:inst|lpm_add_sub:Add0|alt_stratix_add_sub:stratix_adder|add_sub_cell[5]                    ; |CPU|ALU:inst|lpm_add_sub:Add0|alt_stratix_add_sub:stratix_adder|add_sub_cell[5]              ; combout          ;
+; |CPU|ALU:inst|lpm_add_sub:Add0|alt_stratix_add_sub:stratix_adder|add_sub_cell[5]                    ; |CPU|ALU:inst|lpm_add_sub:Add0|alt_stratix_add_sub:stratix_adder|add_sub_cell[5]~COUT         ; cout0            ;
+; |CPU|ALU:inst|lpm_add_sub:Add0|alt_stratix_add_sub:stratix_adder|add_sub_cell[5]                    ; |CPU|ALU:inst|lpm_add_sub:Add0|alt_stratix_add_sub:stratix_adder|add_sub_cell[5]~COUTCOUT1_18 ; cout1            ;
+; |CPU|ALU:inst|lpm_add_sub:Add0|alt_stratix_add_sub:stratix_adder|add_sub_cell[6]                    ; |CPU|ALU:inst|lpm_add_sub:Add0|alt_stratix_add_sub:stratix_adder|add_sub_cell[6]              ; combout          ;
+; |CPU|ALU:inst|lpm_add_sub:Add0|alt_stratix_add_sub:stratix_adder|add_sub_cell[6]                    ; |CPU|ALU:inst|lpm_add_sub:Add0|alt_stratix_add_sub:stratix_adder|add_sub_cell[6]~COUT         ; cout0            ;
+; |CPU|ALU:inst|lpm_add_sub:Add0|alt_stratix_add_sub:stratix_adder|add_sub_cell[6]                    ; |CPU|ALU:inst|lpm_add_sub:Add0|alt_stratix_add_sub:stratix_adder|add_sub_cell[6]~COUTCOUT1_20 ; cout1            ;
+; |CPU|ALU:inst|lpm_add_sub:Add0|alt_stratix_add_sub:stratix_adder|add_sub_cell[7]                    ; |CPU|ALU:inst|lpm_add_sub:Add0|alt_stratix_add_sub:stratix_adder|add_sub_cell[7]              ; combout          ;
+; |CPU|ALU:inst|lpm_add_sub:Add0|alt_stratix_add_sub:stratix_adder|add_sub_cell[7]                    ; |CPU|ALU:inst|lpm_add_sub:Add0|alt_stratix_add_sub:stratix_adder|add_sub_cell[7]~COUT         ; cout0            ;
+; |CPU|ALU:inst|lpm_add_sub:Add0|alt_stratix_add_sub:stratix_adder|add_sub_cell[7]                    ; |CPU|ALU:inst|lpm_add_sub:Add0|alt_stratix_add_sub:stratix_adder|add_sub_cell[7]~COUTCOUT1_22 ; cout1            ;
+; |CPU|ALU:inst|lpm_add_sub:Add0|alt_stratix_add_sub:stratix_adder|add_sub_cell[0]                    ; |CPU|ALU:inst|lpm_add_sub:Add0|alt_stratix_add_sub:stratix_adder|add_sub_cell[0]              ; combout          ;
+; |CPU|ALU:inst|lpm_add_sub:Add0|alt_stratix_add_sub:stratix_adder|add_sub_cell[0]                    ; |CPU|ALU:inst|lpm_add_sub:Add0|alt_stratix_add_sub:stratix_adder|add_sub_cell[0]~COUT         ; cout0            ;
+; |CPU|ALU:inst|lpm_add_sub:Add0|alt_stratix_add_sub:stratix_adder|add_sub_cell[0]                    ; |CPU|ALU:inst|lpm_add_sub:Add0|alt_stratix_add_sub:stratix_adder|add_sub_cell[0]~COUTCOUT1_10 ; cout1            ;
+; |CPU|command_decoder:inst20|Mux12~0                                                                 ; |CPU|command_decoder:inst20|Mux12~0                                                           ; combout          ;
+; |CPU|SRG_group:inst9|Equal4~0                                                                       ; |CPU|SRG_group:inst9|Equal4~0                                                                 ; combout          ;
+; |CPU|command_decoder:inst20|MOVC~0                                                                  ; |CPU|command_decoder:inst20|MOVC~0                                                            ; combout          ;
+; |CPU|Cf_dff:inst2|Cf                                                                                ; |CPU|Cf_dff:inst2|Cf                                                                          ; regout           ;
+; |CPU|controller:inst19|PC_LD~5                                                                      ; |CPU|controller:inst19|PC_LD~5                                                                ; combout          ;
+; |CPU|command_decoder:inst20|Mux12~1                                                                 ; |CPU|command_decoder:inst20|Mux12~1                                                           ; combout          ;
+; |CPU|command_decoder:inst20|JZ~0                                                                    ; |CPU|command_decoder:inst20|JZ~0                                                              ; combout          ;
+; |CPU|controller:inst19|DL~7                                                                         ; |CPU|controller:inst19|DL~7                                                                   ; combout          ;
+; |CPU|command_decoder:inst20|Mux12~2                                                                 ; |CPU|command_decoder:inst20|Mux12~2                                                           ; combout          ;
+; |CPU|command_decoder:inst20|Mux12~3                                                                 ; |CPU|command_decoder:inst20|Mux12~3                                                           ; combout          ;
+; |CPU|controller:inst19|DL                                                                           ; |CPU|controller:inst19|DL                                                                     ; combout          ;
+; |CPU|command_decoder:inst20|MOVB~0                                                                  ; |CPU|command_decoder:inst20|MOVB~0                                                            ; combout          ;
+; |CPU|command_decoder:inst20|IN0~0                                                                   ; |CPU|command_decoder:inst20|IN0~0                                                             ; combout          ;
+; |CPU|inst17[4]~0                                                                                    ; |CPU|inst17[4]~0                                                                              ; combout          ;
+; |CPU|SRG_group:inst9|a[4]                                                                           ; |CPU|SRG_group:inst9|D[4]~18                                                                  ; combout          ;
+; |CPU|SRG_group:inst9|a[4]                                                                           ; |CPU|SRG_group:inst9|a[4]                                                                     ; regout           ;
+; |CPU|SRG_group:inst9|D[4]~19                                                                        ; |CPU|SRG_group:inst9|D[4]~19                                                                  ; combout          ;
+; |CPU|SRG_group:inst9|b[4]                                                                           ; |CPU|SRG_group:inst9|S[4]~18                                                                  ; combout          ;
+; |CPU|SRG_group:inst9|b[4]                                                                           ; |CPU|SRG_group:inst9|b[4]                                                                     ; regout           ;
+; |CPU|SRG_group:inst9|c[4]                                                                           ; |CPU|SRG_group:inst9|S[4]~19                                                                  ; combout          ;
+; |CPU|ALU:inst|process_0~1                                                                           ; |CPU|ALU:inst|process_0~1                                                                     ; combout          ;
+; |CPU|ALU:inst|T[4]~56                                                                               ; |CPU|ALU:inst|T[4]~56                                                                         ; combout          ;
+; |CPU|IR:inst4|output_a[0]                                                                           ; |CPU|command_decoder:inst20|Mux12~4                                                           ; combout          ;
+; |CPU|IR:inst4|output_a[0]                                                                           ; |CPU|IR:inst4|output_a[0]                                                                     ; regout           ;
+; |CPU|IR:inst4|output_a[1]                                                                           ; |CPU|command_decoder:inst20|Mux12~5                                                           ; combout          ;
+; |CPU|IR:inst4|output_a[1]                                                                           ; |CPU|IR:inst4|output_a[1]                                                                     ; regout           ;
+; |CPU|controller:inst19|M~1                                                                          ; |CPU|controller:inst19|M~1                                                                    ; combout          ;
+; |CPU|IR:inst4|output_a[2]                                                                           ; |CPU|command_decoder:inst20|Mux12~6                                                           ; combout          ;
+; |CPU|IR:inst4|output_a[2]                                                                           ; |CPU|IR:inst4|output_a[2]                                                                     ; regout           ;
+; |CPU|ALU:inst|T[5]~57                                                                               ; |CPU|ALU:inst|T[5]~57                                                                         ; combout          ;
+; |CPU|ALU:inst|T[4]~58                                                                               ; |CPU|ALU:inst|T[4]~58                                                                         ; combout          ;
+; |CPU|ALU:inst|T[4]~59                                                                               ; |CPU|ALU:inst|T[4]~59                                                                         ; combout          ;
+; |CPU|ALU:inst|T[5]~60                                                                               ; |CPU|ALU:inst|T[5]~60                                                                         ; combout          ;
+; |CPU|command_decoder:inst20|Mux12~7                                                                 ; |CPU|command_decoder:inst20|Mux12~7                                                           ; combout          ;
+; |CPU|ALU:inst|T[5]~61                                                                               ; |CPU|ALU:inst|T[5]~61                                                                         ; combout          ;
+; |CPU|ALU:inst|T[4]~62                                                                               ; |CPU|ALU:inst|T[4]~62                                                                         ; combout          ;
+; |CPU|controller:inst19|FBUS                                                                         ; |CPU|controller:inst19|FBUS                                                                   ; combout          ;
+; |CPU|SRG_group:inst9|a[5]                                                                           ; |CPU|SRG_group:inst9|D[5]~20                                                                  ; combout          ;
+; |CPU|SRG_group:inst9|D[5]~21                                                                        ; |CPU|SRG_group:inst9|D[5]~21                                                                  ; combout          ;
+; |CPU|SRG_group:inst9|b[5]                                                                           ; |CPU|SRG_group:inst9|S[5]~20                                                                  ; combout          ;
+; |CPU|SRG_group:inst9|b[5]                                                                           ; |CPU|SRG_group:inst9|b[5]                                                                     ; regout           ;
+; |CPU|SRG_group:inst9|c[5]                                                                           ; |CPU|SRG_group:inst9|S[5]~21                                                                  ; combout          ;
+; |CPU|ALU:inst|T[5]~63                                                                               ; |CPU|ALU:inst|T[5]~63                                                                         ; combout          ;
+; |CPU|ALU:inst|T[5]~64                                                                               ; |CPU|ALU:inst|T[5]~64                                                                         ; combout          ;
+; |CPU|ALU:inst|T[5]~65                                                                               ; |CPU|ALU:inst|T[5]~65                                                                         ; combout          ;
+; |CPU|ALU:inst|T[5]~66                                                                               ; |CPU|ALU:inst|T[5]~66                                                                         ; combout          ;
+; |CPU|command_decoder:inst20|Mux12~8                                                                 ; |CPU|command_decoder:inst20|Mux12~8                                                           ; combout          ;
+; |CPU|shift:inst7|W[4]~26                                                                            ; |CPU|shift:inst7|W[4]~26                                                                      ; combout          ;
+; |CPU|SRG_group:inst9|a[3]                                                                           ; |CPU|SRG_group:inst9|D[3]~22                                                                  ; combout          ;
+; |CPU|SRG_group:inst9|D[3]~23                                                                        ; |CPU|SRG_group:inst9|D[3]~23                                                                  ; combout          ;
+; |CPU|SRG_group:inst9|b[3]                                                                           ; |CPU|SRG_group:inst9|S[3]~22                                                                  ; combout          ;
+; |CPU|SRG_group:inst9|b[3]                                                                           ; |CPU|SRG_group:inst9|b[3]                                                                     ; regout           ;
+; |CPU|SRG_group:inst9|c[3]                                                                           ; |CPU|SRG_group:inst9|S[3]~23                                                                  ; combout          ;
+; |CPU|ALU:inst|T[3]~67                                                                               ; |CPU|ALU:inst|T[3]~67                                                                         ; combout          ;
+; |CPU|ALU:inst|T[3]~68                                                                               ; |CPU|ALU:inst|T[3]~68                                                                         ; combout          ;
+; |CPU|ALU:inst|T[3]~69                                                                               ; |CPU|ALU:inst|T[3]~69                                                                         ; combout          ;
+; |CPU|ALU:inst|T[3]~70                                                                               ; |CPU|ALU:inst|T[3]~70                                                                         ; combout          ;
+; |CPU|shift:inst7|W[4]~27                                                                            ; |CPU|shift:inst7|W[4]~27                                                                      ; combout          ;
+; |CPU|shift:inst7|W[7]~28                                                                            ; |CPU|shift:inst7|W[7]~28                                                                      ; combout          ;
+; |CPU|shift:inst7|W[7]~29                                                                            ; |CPU|shift:inst7|W[7]~29                                                                      ; combout          ;
+; |CPU|inst17[4]~1                                                                                    ; |CPU|inst17[4]~1                                                                              ; combout          ;
+; |CPU|inst17[4]~2                                                                                    ; |CPU|inst17[4]~2                                                                              ; combout          ;
+; |CPU|inst17[5]~3                                                                                    ; |CPU|inst17[5]~3                                                                              ; combout          ;
+; |CPU|SRG_group:inst9|a[6]                                                                           ; |CPU|SRG_group:inst9|D[6]~24                                                                  ; combout          ;
+; |CPU|SRG_group:inst9|D[6]~25                                                                        ; |CPU|SRG_group:inst9|D[6]~25                                                                  ; combout          ;
+; |CPU|SRG_group:inst9|b[6]                                                                           ; |CPU|SRG_group:inst9|S[6]~24                                                                  ; combout          ;
+; |CPU|SRG_group:inst9|b[6]                                                                           ; |CPU|SRG_group:inst9|b[6]                                                                     ; regout           ;
+; |CPU|SRG_group:inst9|c[6]                                                                           ; |CPU|SRG_group:inst9|S[6]~25                                                                  ; combout          ;
+; |CPU|ALU:inst|T[6]~71                                                                               ; |CPU|ALU:inst|T[6]~71                                                                         ; combout          ;
+; |CPU|ALU:inst|T[6]~72                                                                               ; |CPU|ALU:inst|T[6]~72                                                                         ; combout          ;
+; |CPU|ALU:inst|T~30                                                                                  ; |CPU|ALU:inst|T~30                                                                            ; combout          ;
+; |CPU|ALU:inst|T[6]~73                                                                               ; |CPU|ALU:inst|T[6]~73                                                                         ; combout          ;
+; |CPU|ALU:inst|T[6]~74                                                                               ; |CPU|ALU:inst|T[6]~74                                                                         ; combout          ;
+; |CPU|shift:inst7|W[5]~30                                                                            ; |CPU|shift:inst7|W[5]~30                                                                      ; combout          ;
+; |CPU|shift:inst7|W[5]~31                                                                            ; |CPU|shift:inst7|W[5]~31                                                                      ; combout          ;
+; |CPU|inst17[5]~4                                                                                    ; |CPU|inst17[5]~4                                                                              ; combout          ;
+; |CPU|inst17[5]~5                                                                                    ; |CPU|inst17[5]~5                                                                              ; combout          ;
+; |CPU|inst17[6]~6                                                                                    ; |CPU|inst17[6]~6                                                                              ; combout          ;
+; |CPU|SRG_group:inst9|a[7]                                                                           ; |CPU|SRG_group:inst9|D[7]~26                                                                  ; combout          ;
+; |CPU|SRG_group:inst9|D[7]~27                                                                        ; |CPU|SRG_group:inst9|D[7]~27                                                                  ; combout          ;
+; |CPU|SRG_group:inst9|b[7]                                                                           ; |CPU|SRG_group:inst9|S[7]~26                                                                  ; combout          ;
+; |CPU|SRG_group:inst9|b[7]                                                                           ; |CPU|SRG_group:inst9|b[7]                                                                     ; regout           ;
+; |CPU|SRG_group:inst9|c[7]                                                                           ; |CPU|SRG_group:inst9|S[7]~27                                                                  ; combout          ;
+; |CPU|ALU:inst|T[7]~75                                                                               ; |CPU|ALU:inst|T[7]~75                                                                         ; combout          ;
+; |CPU|ALU:inst|T[7]~76                                                                               ; |CPU|ALU:inst|T[7]~76                                                                         ; combout          ;
+; |CPU|ALU:inst|T~31                                                                                  ; |CPU|ALU:inst|T~31                                                                            ; combout          ;
+; |CPU|ALU:inst|T[7]~77                                                                               ; |CPU|ALU:inst|T[7]~77                                                                         ; combout          ;
+; |CPU|ALU:inst|T[7]~78                                                                               ; |CPU|ALU:inst|T[7]~78                                                                         ; combout          ;
+; |CPU|shift:inst7|W[6]~32                                                                            ; |CPU|shift:inst7|W[6]~32                                                                      ; combout          ;
+; |CPU|shift:inst7|W[6]~33                                                                            ; |CPU|shift:inst7|W[6]~33                                                                      ; combout          ;
+; |CPU|inst17[6]~7                                                                                    ; |CPU|inst17[6]~7                                                                              ; combout          ;
+; |CPU|inst17[6]~8                                                                                    ; |CPU|inst17[6]~8                                                                              ; combout          ;
+; |CPU|inst17[7]~9                                                                                    ; |CPU|inst17[7]~9                                                                              ; combout          ;
+; |CPU|SRG_group:inst9|a[0]                                                                           ; |CPU|SRG_group:inst9|D[0]~28                                                                  ; combout          ;
+; |CPU|IR:inst4|output_b[3]                                                                           ; |CPU|SRG_group:inst9|D[0]~29                                                                  ; combout          ;
+; |CPU|IR:inst4|output_b[3]                                                                           ; |CPU|IR:inst4|output_b[3]                                                                     ; regout           ;
+; |CPU|SRG_group:inst9|b[0]                                                                           ; |CPU|SRG_group:inst9|S[0]~28                                                                  ; combout          ;
+; |CPU|SRG_group:inst9|b[0]                                                                           ; |CPU|SRG_group:inst9|b[0]                                                                     ; regout           ;
+; |CPU|IR:inst4|output_b[1]                                                                           ; |CPU|SRG_group:inst9|S[0]~29                                                                  ; combout          ;
+; |CPU|IR:inst4|output_b[1]                                                                           ; |CPU|IR:inst4|output_b[1]                                                                     ; regout           ;
+; |CPU|ALU:inst|T[0]~79                                                                               ; |CPU|ALU:inst|T[0]~79                                                                         ; combout          ;
+; |CPU|ALU:inst|T[0]~80                                                                               ; |CPU|ALU:inst|T[0]~80                                                                         ; combout          ;
+; |CPU|SRG_group:inst9|c[0]                                                                           ; |CPU|ALU:inst|T~24                                                                            ; combout          ;
+; |CPU|ALU:inst|T[0]~81                                                                               ; |CPU|ALU:inst|T[0]~81                                                                         ; combout          ;
+; |CPU|ALU:inst|T[0]~82                                                                               ; |CPU|ALU:inst|T[0]~82                                                                         ; combout          ;
+; |CPU|shift:inst7|W[7]~34                                                                            ; |CPU|shift:inst7|W[7]~34                                                                      ; combout          ;
+; |CPU|shift:inst7|W[7]~35                                                                            ; |CPU|shift:inst7|W[7]~35                                                                      ; combout          ;
+; |CPU|inst17[7]~10                                                                                   ; |CPU|inst17[7]~10                                                                             ; combout          ;
+; |CPU|IR:inst4|output_a[3]                                                                           ; |CPU|inst17[7]~11                                                                             ; combout          ;
+; |CPU|IR:inst4|output_a[3]                                                                           ; |CPU|IR:inst4|output_a[3]                                                                     ; regout           ;
+; |CPU|inst17[0]~12                                                                                   ; |CPU|inst17[0]~12                                                                             ; combout          ;
+; |CPU|SRG_group:inst9|a[1]                                                                           ; |CPU|SRG_group:inst9|D[1]~30                                                                  ; combout          ;
+; |CPU|SRG_group:inst9|a[1]                                                                           ; |CPU|SRG_group:inst9|a[1]                                                                     ; regout           ;
+; |CPU|SRG_group:inst9|D[1]~31                                                                        ; |CPU|SRG_group:inst9|D[1]~31                                                                  ; combout          ;
+; |CPU|SRG_group:inst9|b[1]                                                                           ; |CPU|SRG_group:inst9|S[1]~30                                                                  ; combout          ;
+; |CPU|SRG_group:inst9|b[1]                                                                           ; |CPU|SRG_group:inst9|b[1]                                                                     ; regout           ;
+; |CPU|SRG_group:inst9|c[1]                                                                           ; |CPU|SRG_group:inst9|S[1]~31                                                                  ; combout          ;
+; |CPU|ALU:inst|T[1]~83                                                                               ; |CPU|ALU:inst|T[1]~83                                                                         ; combout          ;
+; |CPU|ALU:inst|T[1]~84                                                                               ; |CPU|ALU:inst|T[1]~84                                                                         ; combout          ;
+; |CPU|ALU:inst|T[1]~85                                                                               ; |CPU|ALU:inst|T[1]~85                                                                         ; combout          ;
+; |CPU|ALU:inst|T[1]~86                                                                               ; |CPU|ALU:inst|T[1]~86                                                                         ; combout          ;
+; |CPU|shift:inst7|W[0]~36                                                                            ; |CPU|shift:inst7|W[0]~36                                                                      ; combout          ;
+; |CPU|shift:inst7|W[0]~37                                                                            ; |CPU|shift:inst7|W[0]~37                                                                      ; combout          ;
+; |CPU|inst17[0]~13                                                                                   ; |CPU|inst17[0]~13                                                                             ; combout          ;
+; |CPU|IR:inst4|output_b[0]                                                                           ; |CPU|inst17[0]~14                                                                             ; combout          ;
+; |CPU|IR:inst4|output_b[0]                                                                           ; |CPU|IR:inst4|output_b[0]                                                                     ; regout           ;
+; |CPU|inst17[1]~15                                                                                   ; |CPU|inst17[1]~15                                                                             ; combout          ;
+; |CPU|SRG_group:inst9|a[2]                                                                           ; |CPU|SRG_group:inst9|D[2]~32                                                                  ; combout          ;
+; |CPU|SRG_group:inst9|D[2]~33                                                                        ; |CPU|SRG_group:inst9|D[2]~33                                                                  ; combout          ;
+; |CPU|SRG_group:inst9|b[2]                                                                           ; |CPU|SRG_group:inst9|S[2]~32                                                                  ; combout          ;
+; |CPU|SRG_group:inst9|b[2]                                                                           ; |CPU|SRG_group:inst9|b[2]                                                                     ; regout           ;
+; |CPU|SRG_group:inst9|c[2]                                                                           ; |CPU|SRG_group:inst9|S[2]~33                                                                  ; combout          ;
+; |CPU|ALU:inst|T[2]~87                                                                               ; |CPU|ALU:inst|T[2]~87                                                                         ; combout          ;
+; |CPU|ALU:inst|T[2]~88                                                                               ; |CPU|ALU:inst|T[2]~88                                                                         ; combout          ;
+; |CPU|ALU:inst|T~26                                                                                  ; |CPU|ALU:inst|T~26                                                                            ; combout          ;
+; |CPU|ALU:inst|T[2]~89                                                                               ; |CPU|ALU:inst|T[2]~89                                                                         ; combout          ;
+; |CPU|ALU:inst|T[2]~90                                                                               ; |CPU|ALU:inst|T[2]~90                                                                         ; combout          ;
+; |CPU|shift:inst7|W[1]~38                                                                            ; |CPU|shift:inst7|W[1]~38                                                                      ; combout          ;
+; |CPU|shift:inst7|W[1]~39                                                                            ; |CPU|shift:inst7|W[1]~39                                                                      ; combout          ;
+; |CPU|inst17[1]~16                                                                                   ; |CPU|inst17[1]~16                                                                             ; combout          ;
+; |CPU|inst17[1]~17                                                                                   ; |CPU|inst17[1]~17                                                                             ; combout          ;
+; |CPU|inst17[2]~18                                                                                   ; |CPU|inst17[2]~18                                                                             ; combout          ;
+; |CPU|shift:inst7|W[2]~40                                                                            ; |CPU|shift:inst7|W[2]~40                                                                      ; combout          ;
+; |CPU|inst17[2]~19                                                                                   ; |CPU|inst17[2]~19                                                                             ; combout          ;
+; |CPU|IR:inst4|output_b[2]                                                                           ; |CPU|inst17[2]~20                                                                             ; combout          ;
+; |CPU|IR:inst4|output_b[2]                                                                           ; |CPU|IR:inst4|output_b[2]                                                                     ; regout           ;
+; |CPU|inst17[3]~21                                                                                   ; |CPU|inst17[3]~21                                                                             ; combout          ;
+; |CPU|shift:inst7|W[3]~42                                                                            ; |CPU|shift:inst7|W[3]~42                                                                      ; combout          ;
+; |CPU|inst17[3]~22                                                                                   ; |CPU|inst17[3]~22                                                                             ; combout          ;
+; |CPU|inst17[3]~23                                                                                   ; |CPU|inst17[3]~23                                                                             ; combout          ;
+; |CPU|ALU:inst|T[5]~91                                                                               ; |CPU|ALU:inst|T[5]~91                                                                         ; combout          ;
+; |CPU|controller:inst19|Cf_EN~4                                                                      ; |CPU|controller:inst19|Cf_EN~4                                                                ; combout          ;
+; |CPU|Cf_dff:inst2|Cf~15                                                                             ; |CPU|Cf_dff:inst2|Cf~15                                                                       ; combout          ;
+; |CPU|Cf_dff:inst2|Cf~16                                                                             ; |CPU|Cf_dff:inst2|Cf~16                                                                       ; combout          ;
+; |CPU|ALU:inst|Zf~3                                                                                  ; |CPU|ALU:inst|Zf~3                                                                            ; combout          ;
+; |CPU|ALU:inst|Zf~4                                                                                  ; |CPU|ALU:inst|Zf~4                                                                            ; combout          ;
+; |CPU|Cf_dff:inst2|Cf~17                                                                             ; |CPU|Cf_dff:inst2|Cf~17                                                                       ; combout          ;
+; |CPU|Zf_dff:inst14|Zf~1                                                                             ; |CPU|Zf_dff:inst14|Zf~1                                                                       ; combout          ;
+; |CPU|Zf_dff:inst14|Zf~2                                                                             ; |CPU|Zf_dff:inst14|Zf~2                                                                       ; combout          ;
+; |CPU|Zf_dff:inst14|Zf~3                                                                             ; |CPU|Zf_dff:inst14|Zf~3                                                                       ; combout          ;
+; |CPU|controller:inst19|WE~13                                                                        ; |CPU|controller:inst19|WE~13                                                                  ; combout          ;
+; |CPU|controller:inst19|WE~14                                                                        ; |CPU|controller:inst19|WE~14                                                                  ; combout          ;
+; |CPU|SRG_group:inst9|c[7]~24                                                                        ; |CPU|SRG_group:inst9|c[7]~24                                                                  ; combout          ;
+; |CPU|SRG_group:inst9|b[7]~16                                                                        ; |CPU|SRG_group:inst9|b[7]~16                                                                  ; combout          ;
+; |CPU|SRG_group:inst9|c[7]~25                                                                        ; |CPU|SRG_group:inst9|c[7]~25                                                                  ; combout          ;
+; |CPU|command_decoder:inst20|OUT0~0                                                                  ; |CPU|command_decoder:inst20|OUT0~0                                                            ; combout          ;
+; |CPU|controller:inst19|PC_IN~5                                                                      ; |CPU|controller:inst19|PC_IN~5                                                                ; combout          ;
+; |CPU|PC:inst6|process_0~2                                                                           ; |CPU|PC:inst6|process_0~2                                                                     ; combout          ;
+; |CPU|PC:inst6|address[7]~32                                                                         ; |CPU|PC:inst6|address[7]~32                                                                   ; combout          ;
+; |CPU|lpm_ram_io:inst13|_~1                                                                          ; |CPU|lpm_ram_io:inst13|_~1                                                                    ; combout          ;
+; |CPU|MUX_8_3_1:inst5|Y[0]~16                                                                        ; |CPU|MUX_8_3_1:inst5|Y[0]~16                                                                  ; combout          ;
+; |CPU|command_decoder:inst20|MOVC~1                                                                  ; |CPU|command_decoder:inst20|MOVC~1                                                            ; combout          ;
+; |CPU|MUX_8_3_1:inst5|Equal1~0                                                                       ; |CPU|MUX_8_3_1:inst5|Equal1~0                                                                 ; combout          ;
+; |CPU|MUX_8_3_1:inst5|Y[0]~17                                                                        ; |CPU|MUX_8_3_1:inst5|Y[0]~17                                                                  ; combout          ;
+; |CPU|MUX_8_3_1:inst5|Y[1]~18                                                                        ; |CPU|MUX_8_3_1:inst5|Y[1]~18                                                                  ; combout          ;
+; |CPU|MUX_8_3_1:inst5|Y[1]~19                                                                        ; |CPU|MUX_8_3_1:inst5|Y[1]~19                                                                  ; combout          ;
+; |CPU|MUX_8_3_1:inst5|Y[2]~20                                                                        ; |CPU|MUX_8_3_1:inst5|Y[2]~20                                                                  ; combout          ;
+; |CPU|MUX_8_3_1:inst5|Y[2]~21                                                                        ; |CPU|MUX_8_3_1:inst5|Y[2]~21                                                                  ; combout          ;
+; |CPU|MUX_8_3_1:inst5|Y[3]~22                                                                        ; |CPU|MUX_8_3_1:inst5|Y[3]~22                                                                  ; combout          ;
+; |CPU|MUX_8_3_1:inst5|Y[3]~23                                                                        ; |CPU|MUX_8_3_1:inst5|Y[3]~23                                                                  ; combout          ;
+; |CPU|MUX_8_3_1:inst5|Y[4]~24                                                                        ; |CPU|MUX_8_3_1:inst5|Y[4]~24                                                                  ; combout          ;
+; |CPU|MUX_8_3_1:inst5|Y[4]~25                                                                        ; |CPU|MUX_8_3_1:inst5|Y[4]~25                                                                  ; combout          ;
+; |CPU|MUX_8_3_1:inst5|Y[5]~26                                                                        ; |CPU|MUX_8_3_1:inst5|Y[5]~26                                                                  ; combout          ;
+; |CPU|MUX_8_3_1:inst5|Y[5]~27                                                                        ; |CPU|MUX_8_3_1:inst5|Y[5]~27                                                                  ; combout          ;
+; |CPU|MUX_8_3_1:inst5|Y[6]~28                                                                        ; |CPU|MUX_8_3_1:inst5|Y[6]~28                                                                  ; combout          ;
+; |CPU|MUX_8_3_1:inst5|Y[7]~30                                                                        ; |CPU|MUX_8_3_1:inst5|Y[7]~30                                                                  ; combout          ;
+; |CPU|MUX_8_3_1:inst5|Y[7]~31                                                                        ; |CPU|MUX_8_3_1:inst5|Y[7]~31                                                                  ; combout          ;
+; |CPU|controller:inst19|WE~15                                                                        ; |CPU|controller:inst19|WE~15                                                                  ; combout          ;
+; |CPU|command_decoder:inst20|RSL~2                                                                   ; |CPU|command_decoder:inst20|RSL~2                                                             ; combout          ;
+; |CPU|SRG_group:inst9|a[7]~10                                                                        ; |CPU|SRG_group:inst9|a[7]~10                                                                  ; combout          ;
+; |CPU|SM:inst8|SM~6                                                                                  ; |CPU|SM:inst8|SM~6                                                                            ; combout          ;
+; |CPU|command_decoder:inst20|Equal5~0                                                                ; |CPU|command_decoder:inst20|Equal5~0                                                          ; combout          ;
+; |CPU|controller:inst19|FBUS~7                                                                       ; |CPU|controller:inst19|FBUS~7                                                                 ; combout          ;
+; |CPU|controller:inst19|WE~16                                                                        ; |CPU|controller:inst19|WE~16                                                                  ; combout          ;
+; |CPU|Cf_dff:inst2|Cf~19                                                                             ; |CPU|Cf_dff:inst2|Cf~19                                                                       ; combout          ;
+; |CPU|Cf_dff:inst2|Cf~3                                                                              ; |CPU|Cf_dff:inst2|Cf~3                                                                        ; combout          ;
+; |CPU|ALU:inst|temp[8]                                                                               ; |CPU|ALU:inst|temp[8]                                                                         ; combout          ;
+; |CPU|ALU:inst|temp[1]                                                                               ; |CPU|ALU:inst|temp[1]                                                                         ; combout          ;
+; |CPU|ALU:inst|temp[2]                                                                               ; |CPU|ALU:inst|temp[2]                                                                         ; combout          ;
+; |CPU|ALU:inst|temp[3]                                                                               ; |CPU|ALU:inst|temp[3]                                                                         ; combout          ;
+; |CPU|ALU:inst|temp[4]                                                                               ; |CPU|ALU:inst|temp[4]                                                                         ; combout          ;
+; |CPU|ALU:inst|temp[5]                                                                               ; |CPU|ALU:inst|temp[5]                                                                         ; combout          ;
+; |CPU|ALU:inst|temp[6]                                                                               ; |CPU|ALU:inst|temp[6]                                                                         ; combout          ;
+; |CPU|ALU:inst|temp[7]                                                                               ; |CPU|ALU:inst|temp[7]                                                                         ; combout          ;
+; |CPU|ALU:inst|temp[0]                                                                               ; |CPU|ALU:inst|temp[0]                                                                         ; combout          ;
+; |CPU|LED[7]                                                                                         ; |CPU|LED[7]                                                                                   ; padio            ;
+; |CPU|LED[6]                                                                                         ; |CPU|LED[6]                                                                                   ; padio            ;
+; |CPU|LED[5]                                                                                         ; |CPU|LED[5]                                                                                   ; padio            ;
+; |CPU|LED[4]                                                                                         ; |CPU|LED[4]                                                                                   ; padio            ;
+; |CPU|LED[3]                                                                                         ; |CPU|LED[3]                                                                                   ; padio            ;
+; |CPU|LED[2]                                                                                         ; |CPU|LED[2]                                                                                   ; padio            ;
+; |CPU|LED[1]                                                                                         ; |CPU|LED[1]                                                                                   ; padio            ;
+; |CPU|LED[0]                                                                                         ; |CPU|LED[0]                                                                                   ; padio            ;
+; |CPU|SM                                                                                             ; |CPU|SM                                                                                       ; padio            ;
+; |CPU|RAM_DL                                                                                         ; |CPU|RAM_DL                                                                                   ; padio            ;
+; |CPU|RAM_XL                                                                                         ; |CPU|RAM_XL                                                                                   ; padio            ;
+; |CPU|aa[4]                                                                                          ; |CPU|aa[4]                                                                                    ; padio            ;
+; |CPU|aa[1]                                                                                          ; |CPU|aa[1]                                                                                    ; padio            ;
+; |CPU|bb[7]                                                                                          ; |CPU|bb[7]                                                                                    ; padio            ;
+; |CPU|bb[6]                                                                                          ; |CPU|bb[6]                                                                                    ; padio            ;
+; |CPU|bb[5]                                                                                          ; |CPU|bb[5]                                                                                    ; padio            ;
+; |CPU|bb[4]                                                                                          ; |CPU|bb[4]                                                                                    ; padio            ;
+; |CPU|bb[3]                                                                                          ; |CPU|bb[3]                                                                                    ; padio            ;
+; |CPU|bb[2]                                                                                          ; |CPU|bb[2]                                                                                    ; padio            ;
+; |CPU|bb[1]                                                                                          ; |CPU|bb[1]                                                                                    ; padio            ;
+; |CPU|bb[0]                                                                                          ; |CPU|bb[0]                                                                                    ; padio            ;
+; |CPU|IR[7]                                                                                          ; |CPU|IR[7]                                                                                    ; padio            ;
+; |CPU|IR[6]                                                                                          ; |CPU|IR[6]                                                                                    ; padio            ;
+; |CPU|IR[5]                                                                                          ; |CPU|IR[5]                                                                                    ; padio            ;
+; |CPU|IR[4]                                                                                          ; |CPU|IR[4]                                                                                    ; padio            ;
+; |CPU|IR[3]                                                                                          ; |CPU|IR[3]                                                                                    ; padio            ;
+; |CPU|IR[2]                                                                                          ; |CPU|IR[2]                                                                                    ; padio            ;
+; |CPU|IR[1]                                                                                          ; |CPU|IR[1]                                                                                    ; padio            ;
+; |CPU|IR[0]                                                                                          ; |CPU|IR[0]                                                                                    ; padio            ;
+; |CPU|PC[3]                                                                                          ; |CPU|PC[3]                                                                                    ; padio            ;
+; |CPU|PC[2]                                                                                          ; |CPU|PC[2]                                                                                    ; padio            ;
+; |CPU|PC[1]                                                                                          ; |CPU|PC[1]                                                                                    ; padio            ;
+; |CPU|PC[0]                                                                                          ; |CPU|PC[0]                                                                                    ; padio            ;
+; |CPU|clock                                                                                          ; |CPU|clock~corein                                                                             ; combout          ;
++-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++---------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                              ;
++------------------------------+-------------------------------------+------------------+
+; Node Name                    ; Output Port Name                    ; Output Port Type ;
++------------------------------+-------------------------------------+------------------+
+; |CPU|PC:inst6|address[6]     ; |CPU|PC:inst6|address[6]~19         ; cout0            ;
+; |CPU|PC:inst6|address[6]     ; |CPU|PC:inst6|address[6]~19COUT1_51 ; cout1            ;
+; |CPU|PC:inst6|address[5]     ; |CPU|PC:inst6|address[5]~21         ; cout0            ;
+; |CPU|PC:inst6|address[5]     ; |CPU|PC:inst6|address[5]~21COUT1_49 ; cout1            ;
+; |CPU|PC:inst6|address[4]     ; |CPU|PC:inst6|address[4]~23         ; cout             ;
+; |CPU|Zf_dff:inst14|Zf        ; |CPU|Zf_dff:inst14|Zf               ; regout           ;
+; |CPU|SRG_group:inst9|c[4]    ; |CPU|SRG_group:inst9|c[4]           ; regout           ;
+; |CPU|SRG_group:inst9|c[5]    ; |CPU|SRG_group:inst9|c[5]           ; regout           ;
+; |CPU|SRG_group:inst9|c[6]    ; |CPU|SRG_group:inst9|c[6]           ; regout           ;
+; |CPU|SRG_group:inst9|c[7]    ; |CPU|SRG_group:inst9|c[7]           ; regout           ;
+; |CPU|SRG_group:inst9|c[0]    ; |CPU|SRG_group:inst9|c[0]           ; regout           ;
+; |CPU|SRG_group:inst9|c[1]    ; |CPU|SRG_group:inst9|c[1]           ; regout           ;
+; |CPU|shift:inst7|W[2]~41     ; |CPU|shift:inst7|W[2]~41            ; combout          ;
+; |CPU|shift:inst7|W[3]~43     ; |CPU|shift:inst7|W[3]~43            ; combout          ;
+; |CPU|Zf_dff:inst14|Zf~0      ; |CPU|Zf_dff:inst14|Zf~0             ; combout          ;
+; |CPU|MUX_8_3_1:inst5|Y[6]~29 ; |CPU|MUX_8_3_1:inst5|Y[6]~29        ; combout          ;
+; |CPU|cc[7]                   ; |CPU|cc[7]                          ; padio            ;
+; |CPU|cc[6]                   ; |CPU|cc[6]                          ; padio            ;
+; |CPU|cc[5]                   ; |CPU|cc[5]                          ; padio            ;
+; |CPU|cc[4]                   ; |CPU|cc[4]                          ; padio            ;
+; |CPU|cc[1]                   ; |CPU|cc[1]                          ; padio            ;
+; |CPU|cc[0]                   ; |CPU|cc[0]                          ; padio            ;
+; |CPU|PC[7]                   ; |CPU|PC[7]                          ; padio            ;
+; |CPU|PC[6]                   ; |CPU|PC[6]                          ; padio            ;
+; |CPU|PC[5]                   ; |CPU|PC[5]                          ; padio            ;
+; |CPU|IN[4]                   ; |CPU|IN[4]~corein                   ; combout          ;
+; |CPU|IN[5]                   ; |CPU|IN[5]~corein                   ; combout          ;
+; |CPU|IN[6]                   ; |CPU|IN[6]~corein                   ; combout          ;
+; |CPU|IN[7]                   ; |CPU|IN[7]~corein                   ; combout          ;
+; |CPU|IN[0]                   ; |CPU|IN[0]~corein                   ; combout          ;
+; |CPU|IN[1]                   ; |CPU|IN[1]~corein                   ; combout          ;
+; |CPU|IN[2]                   ; |CPU|IN[2]~corein                   ; combout          ;
+; |CPU|IN[3]                   ; |CPU|IN[3]~corein                   ; combout          ;
++------------------------------+-------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++---------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                              ;
++------------------------------+-------------------------------------+------------------+
+; Node Name                    ; Output Port Name                    ; Output Port Type ;
++------------------------------+-------------------------------------+------------------+
+; |CPU|PC:inst6|address[6]     ; |CPU|PC:inst6|address[6]~19         ; cout0            ;
+; |CPU|PC:inst6|address[6]     ; |CPU|PC:inst6|address[6]~19COUT1_51 ; cout1            ;
+; |CPU|PC:inst6|address[5]     ; |CPU|PC:inst6|address[5]~21         ; cout0            ;
+; |CPU|PC:inst6|address[5]     ; |CPU|PC:inst6|address[5]~21COUT1_49 ; cout1            ;
+; |CPU|PC:inst6|address[4]     ; |CPU|PC:inst6|address[4]~23         ; cout             ;
+; |CPU|Zf_dff:inst14|Zf        ; |CPU|Zf_dff:inst14|Zf               ; regout           ;
+; |CPU|SRG_group:inst9|c[4]    ; |CPU|SRG_group:inst9|c[4]           ; regout           ;
+; |CPU|SRG_group:inst9|a[5]    ; |CPU|SRG_group:inst9|a[5]           ; regout           ;
+; |CPU|SRG_group:inst9|c[5]    ; |CPU|SRG_group:inst9|c[5]           ; regout           ;
+; |CPU|SRG_group:inst9|a[3]    ; |CPU|SRG_group:inst9|a[3]           ; regout           ;
+; |CPU|SRG_group:inst9|c[3]    ; |CPU|SRG_group:inst9|c[3]           ; regout           ;
+; |CPU|ALU:inst|T~27           ; |CPU|ALU:inst|T~27                  ; combout          ;
+; |CPU|SRG_group:inst9|a[6]    ; |CPU|SRG_group:inst9|a[6]           ; regout           ;
+; |CPU|SRG_group:inst9|c[6]    ; |CPU|SRG_group:inst9|c[6]           ; regout           ;
+; |CPU|SRG_group:inst9|a[7]    ; |CPU|SRG_group:inst9|a[7]           ; regout           ;
+; |CPU|SRG_group:inst9|c[7]    ; |CPU|SRG_group:inst9|c[7]           ; regout           ;
+; |CPU|SRG_group:inst9|a[0]    ; |CPU|SRG_group:inst9|a[0]           ; regout           ;
+; |CPU|SRG_group:inst9|c[0]    ; |CPU|SRG_group:inst9|c[0]           ; regout           ;
+; |CPU|SRG_group:inst9|c[1]    ; |CPU|SRG_group:inst9|c[1]           ; regout           ;
+; |CPU|SRG_group:inst9|a[2]    ; |CPU|SRG_group:inst9|a[2]           ; regout           ;
+; |CPU|SRG_group:inst9|c[2]    ; |CPU|SRG_group:inst9|c[2]           ; regout           ;
+; |CPU|shift:inst7|W[2]~41     ; |CPU|shift:inst7|W[2]~41            ; combout          ;
+; |CPU|shift:inst7|W[3]~43     ; |CPU|shift:inst7|W[3]~43            ; combout          ;
+; |CPU|Zf_dff:inst14|Zf~0      ; |CPU|Zf_dff:inst14|Zf~0             ; combout          ;
+; |CPU|MUX_8_3_1:inst5|Y[6]~29 ; |CPU|MUX_8_3_1:inst5|Y[6]~29        ; combout          ;
+; |CPU|SM:inst8|SM~3           ; |CPU|SM:inst8|SM~3                  ; combout          ;
+; |CPU|aa[7]                   ; |CPU|aa[7]                          ; padio            ;
+; |CPU|aa[6]                   ; |CPU|aa[6]                          ; padio            ;
+; |CPU|aa[5]                   ; |CPU|aa[5]                          ; padio            ;
+; |CPU|aa[3]                   ; |CPU|aa[3]                          ; padio            ;
+; |CPU|aa[2]                   ; |CPU|aa[2]                          ; padio            ;
+; |CPU|aa[0]                   ; |CPU|aa[0]                          ; padio            ;
+; |CPU|cc[7]                   ; |CPU|cc[7]                          ; padio            ;
+; |CPU|cc[6]                   ; |CPU|cc[6]                          ; padio            ;
+; |CPU|cc[5]                   ; |CPU|cc[5]                          ; padio            ;
+; |CPU|cc[4]                   ; |CPU|cc[4]                          ; padio            ;
+; |CPU|cc[3]                   ; |CPU|cc[3]                          ; padio            ;
+; |CPU|cc[2]                   ; |CPU|cc[2]                          ; padio            ;
+; |CPU|cc[1]                   ; |CPU|cc[1]                          ; padio            ;
+; |CPU|cc[0]                   ; |CPU|cc[0]                          ; padio            ;
+; |CPU|PC[7]                   ; |CPU|PC[7]                          ; padio            ;
+; |CPU|PC[6]                   ; |CPU|PC[6]                          ; padio            ;
+; |CPU|PC[5]                   ; |CPU|PC[5]                          ; padio            ;
+; |CPU|PC[4]                   ; |CPU|PC[4]                          ; padio            ;
+; |CPU|IN[4]                   ; |CPU|IN[4]~corein                   ; combout          ;
+; |CPU|IN[5]                   ; |CPU|IN[5]~corein                   ; combout          ;
+; |CPU|IN[6]                   ; |CPU|IN[6]~corein                   ; combout          ;
+; |CPU|IN[7]                   ; |CPU|IN[7]~corein                   ; combout          ;
+; |CPU|IN[0]                   ; |CPU|IN[0]~corein                   ; combout          ;
+; |CPU|IN[1]                   ; |CPU|IN[1]~corein                   ; combout          ;
+; |CPU|IN[2]                   ; |CPU|IN[2]~corein                   ; combout          ;
+; |CPU|IN[3]                   ; |CPU|IN[3]~corein                   ; combout          ;
++------------------------------+-------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sat Jan 02 13:45:04 2021
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off CPU -c CPU
+Info: Using vector source file "D:/文档/数电实验/CPU/CPU时序仿真.vwf"
+Info: Overwriting simulation input file with simulation results
+    Info: A backup of CPU时序仿真.vwf called CPU.sim_ori.vwf has been created in the db folder
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      86.06 %
+Info: Number of transitions in simulation is 9056
+Info: Vector file CPU时序仿真.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 159 megabytes
+    Info: Processing ended: Sat Jan 02 13:45:05 2021
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

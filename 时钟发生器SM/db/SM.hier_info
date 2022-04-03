@@ -1,0 +1,6 @@
+|SM
+clk => SM.CLK
+EN => SM.ENA
+Z <= SM.DB_MAX_OUTPUT_PORT_TYPE
+
+

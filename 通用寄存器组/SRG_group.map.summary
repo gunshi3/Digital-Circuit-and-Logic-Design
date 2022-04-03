@@ -1,0 +1,15 @@
+Analysis & Synthesis Status : Successful - Thu Dec 24 20:25:59 2020
+Quartus II Version : 9.0 Build 184 04/29/2009 SP 1 SJ Web Edition
+Revision Name : SRG_group
+Top-level Entity Name : SRG_group
+Family : Stratix II
+Logic utilization : N/A
+    Combinational ALUTs : 19
+    Dedicated logic registers : 24
+Total registers : 24
+Total pins : 54
+Total virtual pins : 0
+Total block memory bits : 0
+DSP block 9-bit elements : 0
+Total PLLs : 0
+Total DLLs : 0

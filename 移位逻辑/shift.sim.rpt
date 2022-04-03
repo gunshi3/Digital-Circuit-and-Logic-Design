@@ -1,0 +1,214 @@
+Simulator report for shift
+Sat Jan 02 14:33:00 2021
+Quartus II Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 49 nodes     ;
+; Simulation Coverage         ;      95.92 % ;
+; Total Number of Transitions ; 5829         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Stratix II   ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Functional ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Vector input source                                                                        ; shift.vwf  ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; On         ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      95.92 % ;
+; Total nodes checked                                 ; 49           ;
+; Total output ports checked                          ; 49           ;
+; Total output ports with complete 1/0-value coverage ; 47           ;
+; Total output ports with no 1/0-value coverage       ; 1            ;
+; Total output ports with no 1-value coverage         ; 1            ;
+; Total output ports with no 0-value coverage         ; 2            ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------+
+; Complete 1/0-Value Coverage                          ;
++----------------+------------------+------------------+
+; Node Name      ; Output Port Name ; Output Port Type ;
++----------------+------------------+------------------+
+; |shift|cf~0    ; |shift|cf~0      ; out              ;
+; |shift|cf~1    ; |shift|cf~1      ; out              ;
+; |shift|cf~2    ; |shift|cf~2      ; out              ;
+; |shift|W[7]~0  ; |shift|W[7]~0    ; out              ;
+; |shift|W[6]~1  ; |shift|W[6]~1    ; out              ;
+; |shift|W[5]~2  ; |shift|W[5]~2    ; out              ;
+; |shift|W[4]~3  ; |shift|W[4]~3    ; out              ;
+; |shift|W[3]~4  ; |shift|W[3]~4    ; out              ;
+; |shift|W[2]~5  ; |shift|W[2]~5    ; out              ;
+; |shift|W[1]~6  ; |shift|W[1]~6    ; out              ;
+; |shift|W[0]~7  ; |shift|W[0]~7    ; out              ;
+; |shift|W[0]~8  ; |shift|W[0]~8    ; out              ;
+; |shift|W[0]~9  ; |shift|W[0]~9    ; out              ;
+; |shift|W[1]~10 ; |shift|W[1]~10   ; out              ;
+; |shift|W[1]~11 ; |shift|W[1]~11   ; out              ;
+; |shift|W[2]~12 ; |shift|W[2]~12   ; out              ;
+; |shift|W[2]~13 ; |shift|W[2]~13   ; out              ;
+; |shift|W[3]~14 ; |shift|W[3]~14   ; out              ;
+; |shift|W[3]~15 ; |shift|W[3]~15   ; out              ;
+; |shift|W[4]~16 ; |shift|W[4]~16   ; out              ;
+; |shift|W[4]~17 ; |shift|W[4]~17   ; out              ;
+; |shift|W[5]~18 ; |shift|W[5]~18   ; out              ;
+; |shift|W[5]~19 ; |shift|W[5]~19   ; out              ;
+; |shift|W[6]~20 ; |shift|W[6]~20   ; out              ;
+; |shift|W[6]~21 ; |shift|W[6]~21   ; out              ;
+; |shift|W[7]~22 ; |shift|W[7]~22   ; out0             ;
+; |shift|W[7]~23 ; |shift|W[7]~23   ; out              ;
+; |shift|W[7]~24 ; |shift|W[7]~24   ; out0             ;
+; |shift|W[7]~25 ; |shift|W[7]~25   ; out              ;
+; |shift|fbus    ; |shift|fbus      ; out              ;
+; |shift|flbus   ; |shift|flbus     ; out              ;
+; |shift|frbus   ; |shift|frbus     ; out              ;
+; |shift|A[0]    ; |shift|A[0]      ; out              ;
+; |shift|A[1]    ; |shift|A[1]      ; out              ;
+; |shift|A[2]    ; |shift|A[2]      ; out              ;
+; |shift|A[3]    ; |shift|A[3]      ; out              ;
+; |shift|A[4]    ; |shift|A[4]      ; out              ;
+; |shift|A[5]    ; |shift|A[5]      ; out              ;
+; |shift|W[0]    ; |shift|W[0]      ; pin_out          ;
+; |shift|W[1]    ; |shift|W[1]      ; pin_out          ;
+; |shift|W[2]    ; |shift|W[2]      ; pin_out          ;
+; |shift|W[3]    ; |shift|W[3]      ; pin_out          ;
+; |shift|W[4]    ; |shift|W[4]      ; pin_out          ;
+; |shift|W[5]    ; |shift|W[5]      ; pin_out          ;
+; |shift|W[6]    ; |shift|W[6]      ; pin_out          ;
+; |shift|W[7]    ; |shift|W[7]      ; pin_out          ;
+; |shift|cf      ; |shift|cf        ; pin_out          ;
++----------------+------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++---------------------------------------------------+
+; Missing 1-Value Coverage                          ;
++-------------+------------------+------------------+
+; Node Name   ; Output Port Name ; Output Port Type ;
++-------------+------------------+------------------+
+; |shift|A[7] ; |shift|A[7]      ; out              ;
++-------------+------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++---------------------------------------------------+
+; Missing 0-Value Coverage                          ;
++-------------+------------------+------------------+
+; Node Name   ; Output Port Name ; Output Port Type ;
++-------------+------------------+------------------+
+; |shift|A[6] ; |shift|A[6]      ; out              ;
+; |shift|A[7] ; |shift|A[7]      ; out              ;
++-------------+------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sat Jan 02 14:32:59 2021
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off shift -c shift
+Info: Using vector source file "D:/文档/数电实验/移位逻辑/shift.vwf"
+Info: Overwriting simulation input file with simulation results
+    Info: A backup of shift.vwf called shift.sim_ori.vwf has been created in the db folder
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      95.92 %
+Info: Number of transitions in simulation is 5829
+Info: Vector file shift.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 155 megabytes
+    Info: Processing ended: Sat Jan 02 14:33:00 2021
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

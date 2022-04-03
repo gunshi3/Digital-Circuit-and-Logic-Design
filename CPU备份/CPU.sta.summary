@@ -1,0 +1,37 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'clock'
+Slack : -5.755
+TNS   : -296.448
+
+Type  : Slow Model Setup 'IR:inst4|output_a[0]'
+Slack : -3.358
+TNS   : -27.857
+
+Type  : Slow Model Hold 'IR:inst4|output_a[0]'
+Slack : -0.906
+TNS   : -7.054
+
+Type  : Slow Model Hold 'clock'
+Slack : -0.902
+TNS   : -11.965
+
+Type  : Fast Model Setup 'clock'
+Slack : -2.937
+TNS   : -139.881
+
+Type  : Fast Model Setup 'IR:inst4|output_a[0]'
+Slack : -1.561
+TNS   : -12.568
+
+Type  : Fast Model Hold 'clock'
+Slack : -0.702
+TNS   : -13.758
+
+Type  : Fast Model Hold 'IR:inst4|output_a[0]'
+Slack : -0.604
+TNS   : -5.004
+
+------------------------------------------------------------

@@ -1,0 +1,405 @@
+Simulator report for SRG_group
+Thu Dec 24 20:26:49 2020
+Quartus II Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 188 nodes    ;
+; Simulation Coverage         ;      75.00 % ;
+; Total Number of Transitions ; 7675         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Stratix II   ;
++-----------------------------+--------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                         ;
++--------------------------------------------------------------------------------------------+---------------+---------------+
+; Option                                                                                     ; Setting       ; Default Value ;
++--------------------------------------------------------------------------------------------+---------------+---------------+
+; Simulation mode                                                                            ; Functional    ; Timing        ;
+; Start time                                                                                 ; 0 ns          ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF          ;               ;
+; Vector input source                                                                        ; SRG_group.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On            ; On            ;
+; Check outputs                                                                              ; Off           ; Off           ;
+; Report simulation coverage                                                                 ; On            ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On            ; On            ;
+; Display missing 1-value coverage report                                                    ; On            ; On            ;
+; Display missing 0-value coverage report                                                    ; On            ; On            ;
+; Detect setup and hold time violations                                                      ; Off           ; Off           ;
+; Detect glitches                                                                            ; Off           ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off           ; Off           ;
+; Generate Signal Activity File                                                              ; Off           ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off           ; Off           ;
+; Group bus channels in simulation results                                                   ; Off           ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On            ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE    ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off           ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; On            ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto          ; Auto          ;
++--------------------------------------------------------------------------------------------+---------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      75.00 % ;
+; Total nodes checked                                 ; 188          ;
+; Total output ports checked                          ; 188          ;
+; Total output ports with complete 1/0-value coverage ; 141          ;
+; Total output ports with no 1/0-value coverage       ; 39           ;
+; Total output ports with no 1-value coverage         ; 39           ;
+; Total output ports with no 0-value coverage         ; 47           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                        ;
++------------------------+------------------------+------------------+
+; Node Name              ; Output Port Name       ; Output Port Type ;
++------------------------+------------------------+------------------+
+; |SRG_group|process_0~0 ; |SRG_group|process_0~0 ; out0             ;
+; |SRG_group|process_0~1 ; |SRG_group|process_0~1 ; out0             ;
+; |SRG_group|a~1         ; |SRG_group|a~1         ; out              ;
+; |SRG_group|a~2         ; |SRG_group|a~2         ; out              ;
+; |SRG_group|a~3         ; |SRG_group|a~3         ; out              ;
+; |SRG_group|a~4         ; |SRG_group|a~4         ; out              ;
+; |SRG_group|a~5         ; |SRG_group|a~5         ; out              ;
+; |SRG_group|a~6         ; |SRG_group|a~6         ; out              ;
+; |SRG_group|a~7         ; |SRG_group|a~7         ; out              ;
+; |SRG_group|b~1         ; |SRG_group|b~1         ; out              ;
+; |SRG_group|b~2         ; |SRG_group|b~2         ; out              ;
+; |SRG_group|b~3         ; |SRG_group|b~3         ; out              ;
+; |SRG_group|b~4         ; |SRG_group|b~4         ; out              ;
+; |SRG_group|b~5         ; |SRG_group|b~5         ; out              ;
+; |SRG_group|b~6         ; |SRG_group|b~6         ; out              ;
+; |SRG_group|b~9         ; |SRG_group|b~9         ; out              ;
+; |SRG_group|b~10        ; |SRG_group|b~10        ; out              ;
+; |SRG_group|b~11        ; |SRG_group|b~11        ; out              ;
+; |SRG_group|b~12        ; |SRG_group|b~12        ; out              ;
+; |SRG_group|b~13        ; |SRG_group|b~13        ; out              ;
+; |SRG_group|b~14        ; |SRG_group|b~14        ; out              ;
+; |SRG_group|c~1         ; |SRG_group|c~1         ; out              ;
+; |SRG_group|c~2         ; |SRG_group|c~2         ; out              ;
+; |SRG_group|c~3         ; |SRG_group|c~3         ; out              ;
+; |SRG_group|c~4         ; |SRG_group|c~4         ; out              ;
+; |SRG_group|c~5         ; |SRG_group|c~5         ; out              ;
+; |SRG_group|c~6         ; |SRG_group|c~6         ; out              ;
+; |SRG_group|c~7         ; |SRG_group|c~7         ; out              ;
+; |SRG_group|c~9         ; |SRG_group|c~9         ; out              ;
+; |SRG_group|c~10        ; |SRG_group|c~10        ; out              ;
+; |SRG_group|c~11        ; |SRG_group|c~11        ; out              ;
+; |SRG_group|c~12        ; |SRG_group|c~12        ; out              ;
+; |SRG_group|c~13        ; |SRG_group|c~13        ; out              ;
+; |SRG_group|c~14        ; |SRG_group|c~14        ; out              ;
+; |SRG_group|c~15        ; |SRG_group|c~15        ; out              ;
+; |SRG_group|c~17        ; |SRG_group|c~17        ; out              ;
+; |SRG_group|c~18        ; |SRG_group|c~18        ; out              ;
+; |SRG_group|c~19        ; |SRG_group|c~19        ; out              ;
+; |SRG_group|c~20        ; |SRG_group|c~20        ; out              ;
+; |SRG_group|c~21        ; |SRG_group|c~21        ; out              ;
+; |SRG_group|c~22        ; |SRG_group|c~22        ; out              ;
+; |SRG_group|c~23        ; |SRG_group|c~23        ; out              ;
+; |SRG_group|c[1]        ; |SRG_group|c[1]        ; regout           ;
+; |SRG_group|c[2]        ; |SRG_group|c[2]        ; regout           ;
+; |SRG_group|c[3]        ; |SRG_group|c[3]        ; regout           ;
+; |SRG_group|c[4]        ; |SRG_group|c[4]        ; regout           ;
+; |SRG_group|c[5]        ; |SRG_group|c[5]        ; regout           ;
+; |SRG_group|b[1]        ; |SRG_group|b[1]        ; regout           ;
+; |SRG_group|b[2]        ; |SRG_group|b[2]        ; regout           ;
+; |SRG_group|b[3]        ; |SRG_group|b[3]        ; regout           ;
+; |SRG_group|b[4]        ; |SRG_group|b[4]        ; regout           ;
+; |SRG_group|b[5]        ; |SRG_group|b[5]        ; regout           ;
+; |SRG_group|D[0]~0      ; |SRG_group|D[0]~0      ; out              ;
+; |SRG_group|D[0]~1      ; |SRG_group|D[0]~1      ; out              ;
+; |SRG_group|D[1]$latch  ; |SRG_group|D[1]$latch  ; out              ;
+; |SRG_group|D[1]~2      ; |SRG_group|D[1]~2      ; out              ;
+; |SRG_group|D[1]~3      ; |SRG_group|D[1]~3      ; out              ;
+; |SRG_group|D[2]$latch  ; |SRG_group|D[2]$latch  ; out              ;
+; |SRG_group|D[2]~4      ; |SRG_group|D[2]~4      ; out              ;
+; |SRG_group|D[2]~5      ; |SRG_group|D[2]~5      ; out              ;
+; |SRG_group|D[3]$latch  ; |SRG_group|D[3]$latch  ; out              ;
+; |SRG_group|D[3]~6      ; |SRG_group|D[3]~6      ; out              ;
+; |SRG_group|D[3]~7      ; |SRG_group|D[3]~7      ; out              ;
+; |SRG_group|D[4]$latch  ; |SRG_group|D[4]$latch  ; out              ;
+; |SRG_group|D[4]~8      ; |SRG_group|D[4]~8      ; out              ;
+; |SRG_group|D[4]~9      ; |SRG_group|D[4]~9      ; out              ;
+; |SRG_group|D[5]$latch  ; |SRG_group|D[5]$latch  ; out              ;
+; |SRG_group|D[5]~10     ; |SRG_group|D[5]~10     ; out              ;
+; |SRG_group|D[5]~11     ; |SRG_group|D[5]~11     ; out              ;
+; |SRG_group|D[6]$latch  ; |SRG_group|D[6]$latch  ; out              ;
+; |SRG_group|D[6]~12     ; |SRG_group|D[6]~12     ; out              ;
+; |SRG_group|D[6]~13     ; |SRG_group|D[6]~13     ; out              ;
+; |SRG_group|D[7]~15     ; |SRG_group|D[7]~15     ; out0             ;
+; |SRG_group|D[7]~17     ; |SRG_group|D[7]~17     ; out0             ;
+; |SRG_group|S[0]$latch  ; |SRG_group|S[0]$latch  ; out              ;
+; |SRG_group|S[0]~0      ; |SRG_group|S[0]~0      ; out              ;
+; |SRG_group|S[0]~1      ; |SRG_group|S[0]~1      ; out              ;
+; |SRG_group|S[1]$latch  ; |SRG_group|S[1]$latch  ; out              ;
+; |SRG_group|S[1]~2      ; |SRG_group|S[1]~2      ; out              ;
+; |SRG_group|S[1]~3      ; |SRG_group|S[1]~3      ; out              ;
+; |SRG_group|S[2]$latch  ; |SRG_group|S[2]$latch  ; out              ;
+; |SRG_group|S[2]~4      ; |SRG_group|S[2]~4      ; out              ;
+; |SRG_group|S[2]~5      ; |SRG_group|S[2]~5      ; out              ;
+; |SRG_group|S[3]$latch  ; |SRG_group|S[3]$latch  ; out              ;
+; |SRG_group|S[3]~6      ; |SRG_group|S[3]~6      ; out              ;
+; |SRG_group|S[3]~7      ; |SRG_group|S[3]~7      ; out              ;
+; |SRG_group|S[4]$latch  ; |SRG_group|S[4]$latch  ; out              ;
+; |SRG_group|S[4]~8      ; |SRG_group|S[4]~8      ; out              ;
+; |SRG_group|S[4]~9      ; |SRG_group|S[4]~9      ; out              ;
+; |SRG_group|S[5]$latch  ; |SRG_group|S[5]$latch  ; out              ;
+; |SRG_group|S[5]~10     ; |SRG_group|S[5]~10     ; out              ;
+; |SRG_group|S[5]~11     ; |SRG_group|S[5]~11     ; out              ;
+; |SRG_group|S[6]$latch  ; |SRG_group|S[6]$latch  ; out              ;
+; |SRG_group|S[6]~13     ; |SRG_group|S[6]~13     ; out              ;
+; |SRG_group|D[0]$latch  ; |SRG_group|D[0]$latch  ; out              ;
+; |SRG_group|S[7]~15     ; |SRG_group|S[7]~15     ; out0             ;
+; |SRG_group|S[7]~17     ; |SRG_group|S[7]~17     ; out0             ;
+; |SRG_group|clk         ; |SRG_group|clk         ; out              ;
+; |SRG_group|WE          ; |SRG_group|WE          ; out              ;
+; |SRG_group|RA[0]       ; |SRG_group|RA[0]       ; out              ;
+; |SRG_group|RA[1]       ; |SRG_group|RA[1]       ; out              ;
+; |SRG_group|WA[0]       ; |SRG_group|WA[0]       ; out              ;
+; |SRG_group|WA[1]       ; |SRG_group|WA[1]       ; out              ;
+; |SRG_group|I[0]        ; |SRG_group|I[0]        ; out              ;
+; |SRG_group|I[1]        ; |SRG_group|I[1]        ; out              ;
+; |SRG_group|I[2]        ; |SRG_group|I[2]        ; out              ;
+; |SRG_group|I[3]        ; |SRG_group|I[3]        ; out              ;
+; |SRG_group|I[4]        ; |SRG_group|I[4]        ; out              ;
+; |SRG_group|I[5]        ; |SRG_group|I[5]        ; out              ;
+; |SRG_group|S[0]        ; |SRG_group|S[0]        ; pin_out          ;
+; |SRG_group|S[1]        ; |SRG_group|S[1]        ; pin_out          ;
+; |SRG_group|S[2]        ; |SRG_group|S[2]        ; pin_out          ;
+; |SRG_group|S[3]        ; |SRG_group|S[3]        ; pin_out          ;
+; |SRG_group|S[4]        ; |SRG_group|S[4]        ; pin_out          ;
+; |SRG_group|S[5]        ; |SRG_group|S[5]        ; pin_out          ;
+; |SRG_group|S[6]        ; |SRG_group|S[6]        ; pin_out          ;
+; |SRG_group|D[0]        ; |SRG_group|D[0]        ; pin_out          ;
+; |SRG_group|D[1]        ; |SRG_group|D[1]        ; pin_out          ;
+; |SRG_group|D[2]        ; |SRG_group|D[2]        ; pin_out          ;
+; |SRG_group|D[3]        ; |SRG_group|D[3]        ; pin_out          ;
+; |SRG_group|D[4]        ; |SRG_group|D[4]        ; pin_out          ;
+; |SRG_group|D[5]        ; |SRG_group|D[5]        ; pin_out          ;
+; |SRG_group|D[6]        ; |SRG_group|D[6]        ; pin_out          ;
+; |SRG_group|bb[1]       ; |SRG_group|bb[1]       ; pin_out          ;
+; |SRG_group|bb[2]       ; |SRG_group|bb[2]       ; pin_out          ;
+; |SRG_group|bb[3]       ; |SRG_group|bb[3]       ; pin_out          ;
+; |SRG_group|bb[4]       ; |SRG_group|bb[4]       ; pin_out          ;
+; |SRG_group|bb[5]       ; |SRG_group|bb[5]       ; pin_out          ;
+; |SRG_group|cc[1]       ; |SRG_group|cc[1]       ; pin_out          ;
+; |SRG_group|cc[2]       ; |SRG_group|cc[2]       ; pin_out          ;
+; |SRG_group|cc[3]       ; |SRG_group|cc[3]       ; pin_out          ;
+; |SRG_group|cc[4]       ; |SRG_group|cc[4]       ; pin_out          ;
+; |SRG_group|cc[5]       ; |SRG_group|cc[5]       ; pin_out          ;
+; |SRG_group|Equal0~0    ; |SRG_group|Equal0~0    ; out0             ;
+; |SRG_group|Equal1~0    ; |SRG_group|Equal1~0    ; out0             ;
+; |SRG_group|Equal2~0    ; |SRG_group|Equal2~0    ; out0             ;
+; |SRG_group|Equal3~0    ; |SRG_group|Equal3~0    ; out0             ;
+; |SRG_group|Equal4~0    ; |SRG_group|Equal4~0    ; out0             ;
+; |SRG_group|Equal5~0    ; |SRG_group|Equal5~0    ; out0             ;
+; |SRG_group|Equal6~0    ; |SRG_group|Equal6~0    ; out0             ;
+; |SRG_group|Equal7~0    ; |SRG_group|Equal7~0    ; out0             ;
++------------------------+------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------+
+; Missing 1-Value Coverage                                         ;
++-----------------------+-----------------------+------------------+
+; Node Name             ; Output Port Name      ; Output Port Type ;
++-----------------------+-----------------------+------------------+
+; |SRG_group|a~0        ; |SRG_group|a~0        ; out              ;
+; |SRG_group|b~0        ; |SRG_group|b~0        ; out              ;
+; |SRG_group|b~7        ; |SRG_group|b~7        ; out              ;
+; |SRG_group|b~8        ; |SRG_group|b~8        ; out              ;
+; |SRG_group|b~15       ; |SRG_group|b~15       ; out              ;
+; |SRG_group|c~0        ; |SRG_group|c~0        ; out              ;
+; |SRG_group|c~8        ; |SRG_group|c~8        ; out              ;
+; |SRG_group|c~16       ; |SRG_group|c~16       ; out              ;
+; |SRG_group|c[7]       ; |SRG_group|c[7]       ; regout           ;
+; |SRG_group|b[0]       ; |SRG_group|b[0]       ; regout           ;
+; |SRG_group|b[7]       ; |SRG_group|b[7]       ; regout           ;
+; |SRG_group|a[0]       ; |SRG_group|a[0]       ; regout           ;
+; |SRG_group|a[1]       ; |SRG_group|a[1]       ; regout           ;
+; |SRG_group|a[2]       ; |SRG_group|a[2]       ; regout           ;
+; |SRG_group|a[3]       ; |SRG_group|a[3]       ; regout           ;
+; |SRG_group|a[4]       ; |SRG_group|a[4]       ; regout           ;
+; |SRG_group|a[5]       ; |SRG_group|a[5]       ; regout           ;
+; |SRG_group|a[6]       ; |SRG_group|a[6]       ; regout           ;
+; |SRG_group|a[7]       ; |SRG_group|a[7]       ; regout           ;
+; |SRG_group|D[7]$latch ; |SRG_group|D[7]$latch ; out              ;
+; |SRG_group|D[7]~14    ; |SRG_group|D[7]~14    ; out              ;
+; |SRG_group|D[7]~16    ; |SRG_group|D[7]~16    ; out              ;
+; |SRG_group|S[7]$latch ; |SRG_group|S[7]$latch ; out              ;
+; |SRG_group|S[7]~14    ; |SRG_group|S[7]~14    ; out              ;
+; |SRG_group|S[7]~16    ; |SRG_group|S[7]~16    ; out              ;
+; |SRG_group|I[7]       ; |SRG_group|I[7]       ; out              ;
+; |SRG_group|S[7]       ; |SRG_group|S[7]       ; pin_out          ;
+; |SRG_group|D[7]       ; |SRG_group|D[7]       ; pin_out          ;
+; |SRG_group|aa[0]      ; |SRG_group|aa[0]      ; pin_out          ;
+; |SRG_group|aa[1]      ; |SRG_group|aa[1]      ; pin_out          ;
+; |SRG_group|aa[2]      ; |SRG_group|aa[2]      ; pin_out          ;
+; |SRG_group|aa[3]      ; |SRG_group|aa[3]      ; pin_out          ;
+; |SRG_group|aa[4]      ; |SRG_group|aa[4]      ; pin_out          ;
+; |SRG_group|aa[5]      ; |SRG_group|aa[5]      ; pin_out          ;
+; |SRG_group|aa[6]      ; |SRG_group|aa[6]      ; pin_out          ;
+; |SRG_group|aa[7]      ; |SRG_group|aa[7]      ; pin_out          ;
+; |SRG_group|bb[0]      ; |SRG_group|bb[0]      ; pin_out          ;
+; |SRG_group|bb[7]      ; |SRG_group|bb[7]      ; pin_out          ;
+; |SRG_group|cc[7]      ; |SRG_group|cc[7]      ; pin_out          ;
++-----------------------+-----------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------------+
+; Missing 0-Value Coverage                                         ;
++-----------------------+-----------------------+------------------+
+; Node Name             ; Output Port Name      ; Output Port Type ;
++-----------------------+-----------------------+------------------+
+; |SRG_group|c[0]       ; |SRG_group|c[0]       ; regout           ;
+; |SRG_group|a~0        ; |SRG_group|a~0        ; out              ;
+; |SRG_group|b~0        ; |SRG_group|b~0        ; out              ;
+; |SRG_group|b~7        ; |SRG_group|b~7        ; out              ;
+; |SRG_group|b~8        ; |SRG_group|b~8        ; out              ;
+; |SRG_group|b~15       ; |SRG_group|b~15       ; out              ;
+; |SRG_group|c~0        ; |SRG_group|c~0        ; out              ;
+; |SRG_group|c~8        ; |SRG_group|c~8        ; out              ;
+; |SRG_group|c~16       ; |SRG_group|c~16       ; out              ;
+; |SRG_group|c[6]       ; |SRG_group|c[6]       ; regout           ;
+; |SRG_group|c[7]       ; |SRG_group|c[7]       ; regout           ;
+; |SRG_group|b[0]       ; |SRG_group|b[0]       ; regout           ;
+; |SRG_group|b[6]       ; |SRG_group|b[6]       ; regout           ;
+; |SRG_group|b[7]       ; |SRG_group|b[7]       ; regout           ;
+; |SRG_group|a[0]       ; |SRG_group|a[0]       ; regout           ;
+; |SRG_group|a[1]       ; |SRG_group|a[1]       ; regout           ;
+; |SRG_group|a[2]       ; |SRG_group|a[2]       ; regout           ;
+; |SRG_group|a[3]       ; |SRG_group|a[3]       ; regout           ;
+; |SRG_group|a[4]       ; |SRG_group|a[4]       ; regout           ;
+; |SRG_group|a[5]       ; |SRG_group|a[5]       ; regout           ;
+; |SRG_group|a[6]       ; |SRG_group|a[6]       ; regout           ;
+; |SRG_group|a[7]       ; |SRG_group|a[7]       ; regout           ;
+; |SRG_group|D[7]$latch ; |SRG_group|D[7]$latch ; out              ;
+; |SRG_group|D[7]~14    ; |SRG_group|D[7]~14    ; out              ;
+; |SRG_group|D[7]~16    ; |SRG_group|D[7]~16    ; out              ;
+; |SRG_group|S[6]~12    ; |SRG_group|S[6]~12    ; out              ;
+; |SRG_group|S[7]$latch ; |SRG_group|S[7]$latch ; out              ;
+; |SRG_group|S[7]~14    ; |SRG_group|S[7]~14    ; out              ;
+; |SRG_group|S[7]~16    ; |SRG_group|S[7]~16    ; out              ;
+; |SRG_group|I[6]       ; |SRG_group|I[6]       ; out              ;
+; |SRG_group|I[7]       ; |SRG_group|I[7]       ; out              ;
+; |SRG_group|S[7]       ; |SRG_group|S[7]       ; pin_out          ;
+; |SRG_group|D[7]       ; |SRG_group|D[7]       ; pin_out          ;
+; |SRG_group|aa[0]      ; |SRG_group|aa[0]      ; pin_out          ;
+; |SRG_group|aa[1]      ; |SRG_group|aa[1]      ; pin_out          ;
+; |SRG_group|aa[2]      ; |SRG_group|aa[2]      ; pin_out          ;
+; |SRG_group|aa[3]      ; |SRG_group|aa[3]      ; pin_out          ;
+; |SRG_group|aa[4]      ; |SRG_group|aa[4]      ; pin_out          ;
+; |SRG_group|aa[5]      ; |SRG_group|aa[5]      ; pin_out          ;
+; |SRG_group|aa[6]      ; |SRG_group|aa[6]      ; pin_out          ;
+; |SRG_group|aa[7]      ; |SRG_group|aa[7]      ; pin_out          ;
+; |SRG_group|bb[0]      ; |SRG_group|bb[0]      ; pin_out          ;
+; |SRG_group|bb[6]      ; |SRG_group|bb[6]      ; pin_out          ;
+; |SRG_group|bb[7]      ; |SRG_group|bb[7]      ; pin_out          ;
+; |SRG_group|cc[0]      ; |SRG_group|cc[0]      ; pin_out          ;
+; |SRG_group|cc[6]      ; |SRG_group|cc[6]      ; pin_out          ;
+; |SRG_group|cc[7]      ; |SRG_group|cc[7]      ; pin_out          ;
++-----------------------+-----------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+    Info: Processing started: Thu Dec 24 20:26:49 2020
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off SRG_group -c SRG_group
+Info: Using vector source file "D:/文档/数电实验/通用寄存器组/SRG_group.vwf"
+Info: Overwriting simulation input file with simulation results
+    Info: A backup of SRG_group.vwf called SRG_group.sim_ori.vwf has been created in the db folder
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Warning: Found clock-sensitive change during active clock edge at time 10.0 ns on register "|SRG_group|c[0]"
+Warning: Found clock-sensitive change during active clock edge at time 20.0 ns on register "|SRG_group|b[1]"
+Warning: Found clock-sensitive change during active clock edge at time 20.0 ns on register "|SRG_group|a[0]"
+Warning: Found clock-sensitive change during active clock edge at time 20.0 ns on register "|SRG_group|a[1]"
+Warning: Found clock-sensitive change during active clock edge at time 40.0 ns on register "|SRG_group|b[2]"
+Warning: Found clock-sensitive change during active clock edge at time 40.0 ns on register "|SRG_group|a[2]"
+Warning: Found clock-sensitive change during active clock edge at time 80.0 ns on register "|SRG_group|b[3]"
+Warning: Found clock-sensitive change during active clock edge at time 80.0 ns on register "|SRG_group|a[3]"
+Warning: Found clock-sensitive change during active clock edge at time 160.0 ns on register "|SRG_group|b[4]"
+Warning: Found clock-sensitive change during active clock edge at time 160.0 ns on register "|SRG_group|a[4]"
+Warning: Found clock-sensitive change during active clock edge at time 320.0 ns on register "|SRG_group|b[5]"
+Warning: Found clock-sensitive change during active clock edge at time 320.0 ns on register "|SRG_group|a[5]"
+Warning: Found clock-sensitive change during active clock edge at time 640.0 ns on register "|SRG_group|b[6]"
+Warning: Found clock-sensitive change during active clock edge at time 640.0 ns on register "|SRG_group|a[6]"
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      75.00 %
+Info: Number of transitions in simulation is 7675
+Info: Vector file SRG_group.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II Simulator was successful. 0 errors, 14 warnings
+    Info: Peak virtual memory: 155 megabytes
+    Info: Processing ended: Thu Dec 24 20:26:49 2020
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+
